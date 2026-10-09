@@ -1,0 +1,73 @@
+{
+  "run_key": "221b291ce584a1f6bf92dc495aeeacb0afa8446303974704024a7021f9e5c473",
+  "label": "turbine real default",
+  "created_utc": "2026-10-08T12:21:54+00:00",
+  "command": "experiments/run_experiment.py --video data/20250920_063942_6C42.mp4 --detections data/20250920_063942_6C42_detections.csv --detection-source real --out outputs/runs/turbine/real_default/tracks.csv --label turbine real default --check-baseline results/turbine/baseline_tracks.csv",
+  "inputs": {
+    "video": {
+      "path": "data/20250920_063942_6C42.mp4",
+      "sha256": "d16e8f3b6ae47c0fcb7140484f2284b0f6c8824851426fe6b1d6a15e73d13bc3",
+      "frame_count": 671,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "data/20250920_063942_6C42_detections.csv",
+      "sha256": "8f211754bc5052c1b95e69825793d38ccf88faec0e08cbf8c81fc76511f7d967",
+      "source": "real",
+      "details": {},
+      "rows": 734
+    }
+  },
+  "tracker": {
+    "params": {
+      "euclidean_matching_threshold": 250.0,
+      "max_age": 30,
+      "tentative_threshold": 3
+    },
+    "source_dir": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker",
+    "source_hash": "7b65976a888fbd3cf4d81f4bd6d42ce5b4115c3276dc71e54e88652c3be5baa4",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/turbine/real_default/tracks.csv",
+    "sha256": "e2d85e82bb596331bec598bd133d47bae8d14186964234929c7c523e474dd084",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 1822,
+    "matched_rows": 556,
+    "coasting_rows": 1266,
+    "track_ids": 35,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "kit detections carry no confidence; matched rows are observations with confidence 1.0"
+    }
+  },
+  "baseline_check": {
+    "path": "results/turbine/baseline_tracks.csv",
+    "sha256": "f4fc4bab1909348831b3ae6a0a62e634bd9d884c804bad0f953cfa78e4c17e3d",
+    "identical_bytes": true,
+    "rows_ours": 1822,
+    "rows_baseline": 1822
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 3.6,
+  "reused": false
+}

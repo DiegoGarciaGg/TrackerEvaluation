@@ -1,0 +1,1192 @@
+[
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise0.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise0.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise0.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise0.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise0.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise0.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise0.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise0.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise0.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise0.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise0.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise0.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise1.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.00_noise3.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.00_noise3.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.00_noise3.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.0,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise0.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise0.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise0.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise1.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise1.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise1.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.10_noise3.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.10_noise3.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.10_noise3.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.1,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise0.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise0.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise0.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise1.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise1.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise1.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.20_noise3.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.20_noise3.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.20_noise3.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.2,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise0.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise0.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 0.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise1.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise1.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise1.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 1.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.0_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.0_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.0_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.0_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.0_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.0_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.0_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.0_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.0_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.0,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.5_seed1/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.5_seed1.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.5_seed1",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 1,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.5_seed2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.5_seed2.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.5_seed2",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 2,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ },
+ {
+  "out": "outputs/runs/flock/gtdeg_drop0.30_noise3.0_fp0.5_seed3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "outputs/detections/flock/gt_drop0.30_noise3.0_fp0.5_seed3.csv",
+  "detection_source": "gt-degraded",
+  "params": {},
+  "label": "E4 flock drop0.30_noise3.0_fp0.5_seed3",
+  "degrade": {
+   "gt_detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+   "drop_rate": 0.3,
+   "center_noise_px": 3.0,
+   "false_positives_per_frame": 0.5,
+   "seed": 3,
+   "frame_count": 1009
+  },
+  "allow_partial_coverage": true
+ }
+]

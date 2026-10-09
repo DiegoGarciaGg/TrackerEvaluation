@@ -1,0 +1,73 @@
+{
+  "run_key": "663acbc471c34ea843146b29089f9328b0d1f45999d18e14682d00243ecd9f6c",
+  "label": "flock real default",
+  "created_utc": "2026-10-08T12:26:37+00:00",
+  "command": "experiments/run_experiment.py --video data/20251012_164031_1DAC.mp4 --detections data/20251012_164031_1DAC_detections.csv --detection-source real --out outputs/runs/flock/real_default/tracks.csv --label flock real default --check-baseline results/flock/baseline_tracks.csv",
+  "inputs": {
+    "video": {
+      "path": "data/20251012_164031_1DAC.mp4",
+      "sha256": "fbc117d9da3fce2eea14268ad8017d5415bc9baeb116531881c1fb5d7b3ebe9e",
+      "frame_count": 1009,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "data/20251012_164031_1DAC_detections.csv",
+      "sha256": "53d7ab0c6f992c2720be0b55c1c7c2f11bff6118b4bb080b80cf68fd7a9d44ad",
+      "source": "real",
+      "details": {},
+      "rows": 4424
+    }
+  },
+  "tracker": {
+    "params": {
+      "euclidean_matching_threshold": 250.0,
+      "max_age": 30,
+      "tentative_threshold": 3
+    },
+    "source_dir": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker",
+    "source_hash": "7b65976a888fbd3cf4d81f4bd6d42ce5b4115c3276dc71e54e88652c3be5baa4",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/flock/real_default/tracks.csv",
+    "sha256": "4c462903461fa0e1602a8834644b363885261199cde378bdcbd347cb7f86452e",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 7571,
+    "matched_rows": 4173,
+    "coasting_rows": 3398,
+    "track_ids": 78,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "kit detections carry no confidence; matched rows are observations with confidence 1.0"
+    }
+  },
+  "baseline_check": {
+    "path": "results/flock/baseline_tracks.csv",
+    "sha256": "903c5ff6f9e4b42bc3a74bfb20639801fcd11de456dd079e270d9143e48e5ca9",
+    "identical_bytes": true,
+    "rows_ours": 7571,
+    "rows_baseline": 7571
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 286.7,
+  "reused": false
+}

@@ -1,0 +1,101 @@
+{
+  "run_key": "2eac5e6316b56f7fc76e1d46d96c0082ba384c019c733cb38a57ae18771a8694",
+  "label": "E4 flock drop0.00_noise1.0_fp0.5_seed3",
+  "created_utc": "2026-10-09T11:18:01+00:00",
+  "command": "experiments/sweep.py --spec experiments/specs/e4_degraded_flock.json --jobs 5",
+  "inputs": {
+    "video": {
+      "path": "data/20251012_164031_1DAC.mp4",
+      "sha256": "fbc117d9da3fce2eea14268ad8017d5415bc9baeb116531881c1fb5d7b3ebe9e",
+      "frame_count": 1009,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.5_seed3.csv",
+      "sha256": "10a75a029a0f85587c5db72df9d95401845696905b5c6560843449b051dcd1e0",
+      "source": "gt-degraded",
+      "details": {
+        "source": "gt-degraded",
+        "created_utc": "2026-10-09T11:07:05+00:00",
+        "gt_detections_csv": {
+          "path": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+          "sha256": "503255dd69b114a560950b253e63d106709032fe55e84c9c6674b120bc271d08",
+          "rows": 10142
+        },
+        "params": {
+          "drop_rate": 0.0,
+          "center_noise_px": 1.0,
+          "false_positives_per_frame": 0.5,
+          "seed": 3,
+          "fps": 25.0,
+          "frame_count": 1009,
+          "fp_region": [
+            0,
+            2703,
+            2160,
+            3470
+          ],
+          "rng": "numpy.random.default_rng(seed)"
+        },
+        "effects": {
+          "dropped": 0,
+          "kept": 10142,
+          "shifted": 8686,
+          "spurious": 543,
+          "rows": 10685
+        },
+        "output": {
+          "path": "outputs/detections/flock/gt_drop0.00_noise1.0_fp0.5_seed3.csv",
+          "sha256": "10a75a029a0f85587c5db72df9d95401845696905b5c6560843449b051dcd1e0"
+        }
+      },
+      "rows": 10685
+    }
+  },
+  "tracker": {
+    "params": {
+      "euclidean_matching_threshold": 250.0,
+      "max_age": 30,
+      "tentative_threshold": 3
+    },
+    "source_dir": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker",
+    "source_hash": "7b65976a888fbd3cf4d81f4bd6d42ce5b4115c3276dc71e54e88652c3be5baa4",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/flock/gtdeg_drop0.00_noise1.0_fp0.5_seed3/tracks.csv",
+    "sha256": "5ac067bb611010d921f4dba7f7e08a2d8e6bdb15c11b9926d8fd2fa388aa40b9",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 10904,
+    "matched_rows": 10095,
+    "coasting_rows": 809,
+    "track_ids": 25,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "kit detections carry no confidence; matched rows are observations with confidence 1.0"
+    }
+  },
+  "baseline_check": null,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 655.7,
+  "reused": false
+}

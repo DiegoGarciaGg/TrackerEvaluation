@@ -1,0 +1,19 @@
+[
+ {
+  "out": "outputs/runs/flock/gt_default/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "params": {},
+  "label": "E3 flock gt-as-detections default"
+ },
+ {
+  "out": "outputs/runs/turbine/gt_default/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "params": {},
+  "label": "E3 turbine gt-as-detections default",
+  "allow_partial_coverage": true
+ }
+]

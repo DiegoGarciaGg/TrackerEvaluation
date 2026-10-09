@@ -1,0 +1,67 @@
+{
+  "run_key": "33995a031c699fc4447d053c04cb8ef7d2a8560e1cc5944eb826a0b257cb9180",
+  "label": "E5 turbine max_age=15 tentative_threshold=2",
+  "created_utc": "2026-10-08T12:23:03+00:00",
+  "command": "experiments/sweep.py --spec experiments/specs/e5_params_turbine.json --jobs 4",
+  "inputs": {
+    "video": {
+      "path": "data/20250920_063942_6C42.mp4",
+      "sha256": "d16e8f3b6ae47c0fcb7140484f2284b0f6c8824851426fe6b1d6a15e73d13bc3",
+      "frame_count": 671,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "data/20250920_063942_6C42_detections.csv",
+      "sha256": "8f211754bc5052c1b95e69825793d38ccf88faec0e08cbf8c81fc76511f7d967",
+      "source": "real",
+      "details": {},
+      "rows": 734
+    }
+  },
+  "tracker": {
+    "params": {
+      "euclidean_matching_threshold": 250.0,
+      "max_age": 15,
+      "tentative_threshold": 2
+    },
+    "source_dir": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker",
+    "source_hash": "7b65976a888fbd3cf4d81f4bd6d42ce5b4115c3276dc71e54e88652c3be5baa4",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/turbine/real_maxage15_tent2/tracks.csv",
+    "sha256": "8e083fdf99e3930fea0b2a9e4eb7bafa100534c70b669cf832fd2a7b454404b0",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 1736,
+    "matched_rows": 628,
+    "coasting_rows": 1108,
+    "track_ids": 62,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "kit detections carry no confidence; matched rows are observations with confidence 1.0"
+    }
+  },
+  "baseline_check": null,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 3.1,
+  "reused": false
+}

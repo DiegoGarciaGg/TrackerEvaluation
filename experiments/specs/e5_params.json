@@ -1,0 +1,268 @@
+[
+ {
+  "out": "outputs/runs/flock/real_maxage5_tent2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 2
+  },
+  "label": "E5 flock max_age=5 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage5_tent3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 3
+  },
+  "label": "E5 flock max_age=5 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage5_tent5/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 5
+  },
+  "label": "E5 flock max_age=5 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage15_tent2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 2
+  },
+  "label": "E5 flock max_age=15 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage15_tent3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 3
+  },
+  "label": "E5 flock max_age=15 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage15_tent5/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 5
+  },
+  "label": "E5 flock max_age=15 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage30_tent2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 2
+  },
+  "label": "E5 flock max_age=30 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/flock/real_default/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 3
+  },
+  "label": "E5 flock max_age=30 tentative_threshold=3",
+  "check_baseline": "results/flock/baseline_tracks.csv"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage30_tent5/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 5
+  },
+  "label": "E5 flock max_age=30 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage60_tent2/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 2
+  },
+  "label": "E5 flock max_age=60 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage60_tent3/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 3
+  },
+  "label": "E5 flock max_age=60 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/flock/real_maxage60_tent5/tracks.csv",
+  "video": "data/20251012_164031_1DAC.mp4",
+  "detections": "data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 5
+  },
+  "label": "E5 flock max_age=60 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage5_tent2/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 2
+  },
+  "label": "E5 turbine max_age=5 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage5_tent3/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 3
+  },
+  "label": "E5 turbine max_age=5 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage5_tent5/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 5,
+   "tentative_threshold": 5
+  },
+  "label": "E5 turbine max_age=5 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage15_tent2/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 2
+  },
+  "label": "E5 turbine max_age=15 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage15_tent3/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 3
+  },
+  "label": "E5 turbine max_age=15 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage15_tent5/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 15,
+   "tentative_threshold": 5
+  },
+  "label": "E5 turbine max_age=15 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage30_tent2/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 2
+  },
+  "label": "E5 turbine max_age=30 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/turbine/real_default/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 3
+  },
+  "label": "E5 turbine max_age=30 tentative_threshold=3",
+  "check_baseline": "results/turbine/baseline_tracks.csv"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage30_tent5/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 30,
+   "tentative_threshold": 5
+  },
+  "label": "E5 turbine max_age=30 tentative_threshold=5"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage60_tent2/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 2
+  },
+  "label": "E5 turbine max_age=60 tentative_threshold=2"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage60_tent3/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 3
+  },
+  "label": "E5 turbine max_age=60 tentative_threshold=3"
+ },
+ {
+  "out": "outputs/runs/turbine/real_maxage60_tent5/tracks.csv",
+  "video": "data/20250920_063942_6C42.mp4",
+  "detections": "data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "params": {
+   "max_age": 60,
+   "tentative_threshold": 5
+  },
+  "label": "E5 turbine max_age=60 tentative_threshold=5"
+ }
+]

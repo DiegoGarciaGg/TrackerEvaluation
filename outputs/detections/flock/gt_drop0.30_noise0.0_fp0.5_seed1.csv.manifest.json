@@ -1,0 +1,35 @@
+{
+  "source": "gt-degraded",
+  "created_utc": "2026-10-09T11:26:07+00:00",
+  "gt_detections_csv": {
+    "path": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+    "sha256": "503255dd69b114a560950b253e63d106709032fe55e84c9c6674b120bc271d08",
+    "rows": 10142
+  },
+  "params": {
+    "drop_rate": 0.3,
+    "center_noise_px": 0.0,
+    "false_positives_per_frame": 0.5,
+    "seed": 1,
+    "fps": 25.0,
+    "frame_count": 1009,
+    "fp_region": [
+      0,
+      2703,
+      2160,
+      3470
+    ],
+    "rng": "numpy.random.default_rng(seed)"
+  },
+  "effects": {
+    "dropped": 3029,
+    "kept": 7113,
+    "shifted": 0,
+    "spurious": 500,
+    "rows": 7613
+  },
+  "output": {
+    "path": "outputs/detections/flock/gt_drop0.30_noise0.0_fp0.5_seed1.csv",
+    "sha256": "d04b37c3392ba54715ae68208401c4b1bf96498681b79ff33f5ea8b3b3da1863"
+  }
+}

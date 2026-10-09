@@ -1,0 +1,12 @@
+{
+  "flock|20251012_164031_1DAC|baseline:cloud": "a75867a419ee700f",
+  "flock|20251012_164031_1DAC|detections:real": "99ac75caacf31f9a",
+  "flock|20251012_164031_1DAC|gt": "f606684f87ef6a7a",
+  "flock|20251012_164031_1DAC|kit:baseline": "bfa283d728c767e8",
+  "flock|20251012_164031_1DAC|kit:real_default": "431df7d4cc755ee3",
+  "flock|20251012_164031_1DAC|kit:reference": "d1112153d32b3c8f",
+  "turbine|20250920_063942_6C42|baseline:cloud": "5837e9acbe2d7098",
+  "turbine|20250920_063942_6C42|detections:real": "b52304d5cc1abd60",
+  "turbine|20250920_063942_6C42|gt": "d58757cce47107c1",
+  "turbine|20250920_063942_6C42|kit:baseline": "41ae1de671302e2e"
+}
