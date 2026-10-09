@@ -18,7 +18,6 @@ from evaluation.contracts import Provenance, RunResult
 from evaluation.diagnostics import Diagnostics, diagnose
 from evaluation.similarity import DEFAULT_THRESHOLD, scale_for_match_px
 from evaluation.trackeval_bridge import (
-    SUMMARY_FIELDS,
     build_sequence,
     center_distance_similarity,
     run_metrics,
@@ -229,22 +228,22 @@ def render_markdown(report: EvaluationReport, max_switches: int = 60) -> str:
     lines.append("")
 
     lines.append("## Metrics (center-distance matching)")
-    header = "| view | region | px | ref | cand | HOTA | DetA | AssA | LocA px | HOTA@a.5 | MOTA | MOTP px | IDSW | Frag | IDF1 | IDP | IDR | Re | Pr | TP | FN | FP | MT | PT | ML |"
+    header = "| view | region | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |"
     lines.append(header)
     lines.append("|" + "---|" * (header.count("|") - 1))
     for row in report.rows:
         m = row.metrics
         lines.append(
-            f"| {row.view} | {'ignore' if row.ignore_region else 'none'} | {row.match_px:g} | {row.reference_entries} | {row.candidate_entries} | "
-            f"{m['HOTA']:.3f} | {m['DetA']:.3f} | {m['AssA']:.3f} | {m['LocA_px']:.2f} | {m['HOTA_a50']:.3f} | "
-            f"{m['MOTA']:.3f} | {m['MOTP_px']:.2f} | {m['IDSW']} | {m['Frag']} | {m['IDF1']:.3f} | {m['IDP']:.3f} | {m['IDR']:.3f} | "
-            f"{m['CLR_Re']:.3f} | {m['CLR_Pr']:.3f} | {m['CLR_TP']} | {m['CLR_FN']} | {m['CLR_FP']} | {m['MT']} | {m['PT']} | {m['ML']} |"
+            f"| {row.view} | {'ignore' if row.ignore_region else 'none'} | {row.match_px:g} | "
+            f"{m['HOTA']:.3f} | {m['AssA']:.3f} | {m['MOTA']:.3f} | {m['MOTP_px']:.2f} | {m['IDF1']:.3f} | {m['IDSW']} | {m['Frag']} |"
         )
     lines.append("")
-    lines.append("HOTA/DetA/AssA are TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T); HOTA@a.5 is the value at the configured px. "
-                 "LocA px and MOTP px are mean center distance over matches. Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. "
-                 "CLEAR's Frag counts every resumption of tracking after an interruption, including frames where the reference object itself is absent, "
-                 "so a reference with gaps gives Frag > 0 even to a perfect candidate (the flock GT has 111 such gaps), while an interruption that falls on frames with no candidate entry at all is not counted by CLEAR; the diagnostics' fragmentation below counts only interruptions within the object's labelled frames, whatever the rest of the frame holds.")
+    lines.append("HOTA = sqrt(DetA * AssA), TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T). AssA = association accuracy (one bird, one id). "
+                 "MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. "
+                 "IDSW = identity switches, Frag = fragmentations (CLEAR definition; counts resumptions after any interruption, including frames where the "
+                 "reference object itself is absent, so the flock GT's 111 gaps give Frag > 0 even to a perfect candidate). "
+                 "Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. "
+                 "All other TrackEval fields (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN) are in the JSON report.")
     lines.append("")
 
     for key, diag in report.diagnostics.items():
@@ -312,11 +311,3 @@ def render_markdown(report: EvaluationReport, max_switches: int = 60) -> str:
             lines.append("- no candidate tracks")
         lines.append("")
     return "\n".join(lines)
-
-
-def summary_table(report: EvaluationReport, fields: Sequence[str] = ("HOTA", "DetA", "AssA", "MOTA", "IDF1", "IDSW", "Frag")) -> list[dict]:
-    """Compact rows for cross-run tables."""
-    return [
-        {"view": row.view, "region": row.ignore_region, "px": row.match_px, **{f: row.metrics[f] for f in fields}}
-        for row in report.rows
-    ]

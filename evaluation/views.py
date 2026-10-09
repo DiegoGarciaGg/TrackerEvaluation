@@ -152,10 +152,6 @@ def count_entries(view: FrameView) -> int:
     return sum(len(entries) for entries in view.values())
 
 
-def track_ids_in(view: FrameView) -> set[str]:
-    return {entry.track_id for entries in view.values() for entry in entries}
-
-
 def apply_reference_proximity(candidate: FrameView, reference: FrameView, radius_px: float) -> FrameView:
     """Keep only candidate entries within ``radius_px`` of some reference entry in the same frame.
 

@@ -178,13 +178,6 @@ def _scalar(value):
     return value
 
 
-SUMMARY_FIELDS = (
-    "HOTA", "DetA", "AssA", "LocA", "HOTA_a50", "DetA_a50", "AssA_a50", "LocA_a50",
-    "MOTA", "MOTP", "IDSW", "Frag", "CLR_Re", "CLR_Pr", "CLR_TP", "CLR_FN", "CLR_FP", "MT", "PT", "ML",
-    "IDF1", "IDP", "IDR", "IDTP", "IDFN", "IDFP",
-)
-
-
 def trackeval_provenance() -> dict:
     return {"library": "TrackEval", "url": TRACKEVAL_URL, "commit": TRACKEVAL_COMMIT, "license": "MIT",
             "numpy_alias_shim": "np.float and np.int restored as float/int before import; sources unmodified",

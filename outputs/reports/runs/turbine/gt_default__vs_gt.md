@@ -26,18 +26,18 @@ Reference: predictor=gt claim=accuracy curation=independent manual annotation (n
 - frames restricted to 53..293 on both sides
 
 ## Metrics (center-distance matching)
-| view | region | px | ref | cand | HOTA | DetA | AssA | LocA px | HOTA@a.5 | MOTA | MOTP px | IDSW | Frag | IDF1 | IDP | IDR | Re | Pr | TP | FN | FP | MT | PT | ML |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| observations | none | 4 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| observations | none | 6 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| observations | none | 8 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| observations | none | 12 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| updates | none | 4 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| updates | none | 6 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| updates | none | 8 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
-| updates | none | 12 | 241 | 239 | 0.992 | 0.992 | 0.992 | 0.00 | 0.992 | 0.992 | 0.00 | 0 | 0.0 | 0.996 | 1.000 | 0.992 | 0.992 | 1.000 | 239 | 2 | 0 | 1 | 0 | 0 |
+| view | region | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |
+|---|---|---|---|---|---|---|---|---|---|
+| observations | none | 4 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| observations | none | 6 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| observations | none | 8 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| observations | none | 12 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| updates | none | 4 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| updates | none | 6 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| updates | none | 8 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
+| updates | none | 12 | 0.992 | 0.992 | 0.992 | 0.00 | 0.996 | 0 | 0.0 |
 
-HOTA/DetA/AssA are TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T); HOTA@a.5 is the value at the configured px. LocA px and MOTP px are mean center distance over matches. Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. CLEAR's Frag counts every resumption of tracking after an interruption, including frames where the reference object itself is absent, so a reference with gaps gives Frag > 0 even to a perfect candidate (the flock GT has 111 such gaps), while an interruption that falls on frames with no candidate entry at all is not counted by CLEAR; the diagnostics' fragmentation below counts only interruptions within the object's labelled frames, whatever the rest of the frame holds.
+HOTA = sqrt(DetA * AssA), TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T). AssA = association accuracy (one bird, one id). MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. IDSW = identity switches, Frag = fragmentations (CLEAR definition; counts resumptions after any interruption, including frames where the reference object itself is absent, so the flock GT's 111 gaps give Frag > 0 even to a perfect candidate). Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. All other TrackEval fields (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN) are in the JSON report.
 
 ## Diagnostics: view=observations, region=none, match 8 px
 - reference objects: 1; candidate ids: 1; matched pairs: 239; unmatched reference entries: 2; unmatched candidate entries: 0

@@ -166,6 +166,7 @@
    "polygons": []
   },
   "frame_range": null,
+  "reference_proximity_px": null,
   "num_timesteps": 1009,
   "trackeval": {
    "library": "TrackEval",
@@ -175,7 +176,7 @@
    "numpy_alias_shim": "np.float and np.int restored as float/int before import; sources unmodified",
    "installed_from": "/Users/diegogarciagonzalez/tracker-kit-Eval/.venv/lib/python3.12/site-packages/trackeval/__init__.py"
   },
-  "created_utc": "2026-10-09T11:20:40+00:00",
+  "created_utc": "2026-10-09T13:27:41+00:00",
   "candidate_output_sha256": "bae70a70eb67b66cba1ebe6ee11322c0ac0a7d0e5248428f706168982077f81a"
  },
  "rows": [

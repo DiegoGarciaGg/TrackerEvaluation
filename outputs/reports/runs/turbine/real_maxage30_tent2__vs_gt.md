@@ -26,18 +26,18 @@ Reference: predictor=gt claim=accuracy curation=independent manual annotation (n
 - frames restricted to 53..293 on both sides
 
 ## Metrics (center-distance matching)
-| view | region | px | ref | cand | HOTA | DetA | AssA | LocA px | HOTA@a.5 | MOTA | MOTP px | IDSW | Frag | IDF1 | IDP | IDR | Re | Pr | TP | FN | FP | MT | PT | ML |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| observations | none | 4 | 241 | 373 | 0.626 | 0.500 | 0.785 | 0.42 | 0.667 | 0.220 | 0.47 | 0 | 4.0 | 0.694 | 0.571 | 0.884 | 0.884 | 0.571 | 213 | 28 | 160 | 1 | 0 | 0 |
-| observations | none | 6 | 241 | 373 | 0.649 | 0.517 | 0.814 | 0.45 | 0.673 | 0.228 | 0.49 | 0 | 3.0 | 0.697 | 0.574 | 0.888 | 0.888 | 0.574 | 214 | 27 | 159 | 1 | 0 | 0 |
-| observations | none | 8 | 241 | 373 | 0.656 | 0.523 | 0.824 | 0.46 | 0.673 | 0.228 | 0.49 | 0 | 3.0 | 0.697 | 0.574 | 0.888 | 0.888 | 0.574 | 214 | 27 | 159 | 1 | 0 | 0 |
-| observations | none | 12 | 241 | 373 | 0.680 | 0.542 | 0.853 | 0.68 | 0.673 | 0.228 | 0.49 | 0 | 3.0 | 0.697 | 0.574 | 0.888 | 0.888 | 0.574 | 214 | 27 | 159 | 1 | 0 | 0 |
-| updates | none | 4 | 241 | 1057 | 0.374 | 0.187 | 0.750 | 0.44 | 0.395 | -2.618 | 0.47 | 0 | 4.0 | 0.328 | 0.202 | 0.884 | 0.884 | 0.202 | 213 | 28 | 844 | 1 | 0 | 0 |
-| updates | none | 6 | 241 | 1057 | 0.390 | 0.194 | 0.783 | 0.51 | 0.403 | -2.593 | 0.53 | 0 | 4.0 | 0.333 | 0.204 | 0.896 | 0.896 | 0.204 | 216 | 25 | 841 | 1 | 0 | 0 |
-| updates | none | 8 | 241 | 1057 | 0.396 | 0.197 | 0.796 | 0.55 | 0.403 | -2.593 | 0.53 | 0 | 4.0 | 0.333 | 0.204 | 0.896 | 0.896 | 0.204 | 216 | 25 | 841 | 1 | 0 | 0 |
-| updates | none | 12 | 241 | 1057 | 0.413 | 0.204 | 0.838 | 0.84 | 0.409 | -2.577 | 0.64 | 2 | 4.0 | 0.336 | 0.206 | 0.905 | 0.909 | 0.207 | 219 | 22 | 838 | 1 | 0 | 0 |
+| view | region | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |
+|---|---|---|---|---|---|---|---|---|---|
+| observations | none | 4 | 0.626 | 0.785 | 0.220 | 0.47 | 0.694 | 0 | 4.0 |
+| observations | none | 6 | 0.649 | 0.814 | 0.228 | 0.49 | 0.697 | 0 | 3.0 |
+| observations | none | 8 | 0.656 | 0.824 | 0.228 | 0.49 | 0.697 | 0 | 3.0 |
+| observations | none | 12 | 0.680 | 0.853 | 0.228 | 0.49 | 0.697 | 0 | 3.0 |
+| updates | none | 4 | 0.374 | 0.750 | -2.618 | 0.47 | 0.328 | 0 | 4.0 |
+| updates | none | 6 | 0.390 | 0.783 | -2.593 | 0.53 | 0.333 | 0 | 4.0 |
+| updates | none | 8 | 0.396 | 0.796 | -2.593 | 0.53 | 0.333 | 0 | 4.0 |
+| updates | none | 12 | 0.413 | 0.838 | -2.577 | 0.64 | 0.336 | 2 | 4.0 |
 
-HOTA/DetA/AssA are TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T); HOTA@a.5 is the value at the configured px. LocA px and MOTP px are mean center distance over matches. Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. CLEAR's Frag counts every resumption of tracking after an interruption, including frames where the reference object itself is absent, so a reference with gaps gives Frag > 0 even to a perfect candidate (the flock GT has 111 such gaps), while an interruption that falls on frames with no candidate entry at all is not counted by CLEAR; the diagnostics' fragmentation below counts only interruptions within the object's labelled frames, whatever the rest of the frame holds.
+HOTA = sqrt(DetA * AssA), TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T). AssA = association accuracy (one bird, one id). MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. IDSW = identity switches, Frag = fragmentations (CLEAR definition; counts resumptions after any interruption, including frames where the reference object itself is absent, so the flock GT's 111 gaps give Frag > 0 even to a perfect candidate). Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. All other TrackEval fields (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN) are in the JSON report.
 
 ## Diagnostics: view=observations, region=none, match 8 px
 - reference objects: 1; candidate ids: 19; matched pairs: 214; unmatched reference entries: 27; unmatched candidate entries: 159

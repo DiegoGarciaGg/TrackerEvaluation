@@ -103,6 +103,10 @@ def fmt(row: dict | None, key: str) -> str:
     return f"{value:.3f}" if isinstance(value, float) and key not in ("IDSW", "Frag") else f"{int(value)}"
 
 
+def px_fmt(row: dict | None, key: str) -> str:
+    return "-" if row is None else f"{row['metrics'][key]:.2f}"
+
+
 def discover(runs_root: Path) -> list[tuple[str, str, Path]]:
     found = []
     for clip in CLIPS:
@@ -141,17 +145,21 @@ def main() -> None:
     px = args.px
     lines = ["# Experiment summary", "",
              f"Match distance {px:g} px (T = {2 * px:g}); HOTA/DetA/AssA = TrackEval mean over alphas; flock scored with the timestamp overlay ignored; turbine accuracy restricted to frames {TURBINE_GT_FRAMES[0]}..{TURBINE_GT_FRAMES[1]}. "
-             "`obs` = matched rows only (10-column runs), `all` = every row as written. Per-run reports with provenance, sensitivity (4/6/8/12 px), both views, with/without region, and the identity-switch lists are in runs/<clip>/.", ""]
+             "`obs` = matched rows only (10-column runs), `all` = every row as written. Per-run reports with provenance, sensitivity (4/6/8/12 px), both views, with/without region, and the identity-switch lists are in runs/<clip>/.", "",
+             "Columns: HOTA = sqrt(DetA * AssA), the overall score. AssA = association accuracy (one bird keeps one id, one id keeps one bird). "
+             "MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. "
+             "IDSW = identity switches. Frag = fragmentations (CLEAR definition; the flock GT's own 111 gaps give a floor of about 111 even to a perfect tracker). "
+             "Every other TrackEval field (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN, ids) stays in the per-run JSON reports.", ""]
 
     def table(title: str, keys: list[tuple[str, str, str, str]], view_label: bool = True):
         lines.append(f"## {title}")
         lines.append("")
-        lines.append("| run | claim | view | HOTA | DetA | AssA | MOTA | IDF1 | IDSW | Frag | TP | FP | FN | ids | objects | switches (diag) | orphans |")
-        lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+        lines.append("| run | claim | view | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |")
+        lines.append("|---|---|---|---|---|---|---|---|---|---|")
         for clip, name, kind, label in keys:
             r = by_key.get((clip, name, kind))
             if r is None:
-                lines.append(f"| {label} | {kind} | missing | | | | | | | | | | | | | | |")
+                lines.append(f"| {label} | {kind} | missing | | | | | | | |")
                 continue
             claim = "accuracy" if kind == "gt" else "parity"
             region = clip == "flock"
@@ -159,11 +167,9 @@ def main() -> None:
                 row = pick(r["rows"], view, px, region)
                 if row is None:
                     continue
-                diag = r["diag"].get(f"{view}|{'region' if region else 'noregion'}", {})
                 lines.append(
-                    f"| {label} | {claim} | {'obs' if view == 'observations' else 'all'} | {fmt(row, 'HOTA')} | {fmt(row, 'DetA')} | {fmt(row, 'AssA')} | {fmt(row, 'MOTA')} | {fmt(row, 'IDF1')} | "
-                    f"{fmt(row, 'IDSW')} | {fmt(row, 'Frag')} | {fmt(row, 'CLR_TP')} | {fmt(row, 'CLR_FP')} | {fmt(row, 'CLR_FN')} | {fmt(row, 'num_tracker_ids')} | {fmt(row, 'num_gt_ids')} | "
-                    f"{diag.get('switches', '-')} | {diag.get('orphans', '-')} |"
+                    f"| {label} | {claim} | {'obs' if view == 'observations' else 'all'} | {fmt(row, 'HOTA')} | {fmt(row, 'AssA')} | "
+                    f"{fmt(row, 'MOTA')} | {px_fmt(row, 'MOTP_px')} | {fmt(row, 'IDF1')} | {fmt(row, 'IDSW')} | {fmt(row, 'Frag')} |"
                 )
         lines.append("")
 
@@ -194,21 +200,21 @@ def main() -> None:
             groups.setdefault(key, []).append(r)
         lines.append("## E4 robustness: ground truth degraded (flock), matched rows, mean +- spread over seeds")
         lines.append("")
-        lines.append("| drop | noise px | FP/frame | seeds | HOTA | DetA | AssA | IDF1 | IDSW | ids | FP | FN |")
-        lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
+        lines.append("| drop | noise px | FP/frame | seeds | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |")
+        lines.append("|---|---|---|---|---|---|---|---|---|---|---|")
         for key in sorted(groups, key=lambda k: tuple(x if x is not None else -1 for x in k)):
             rows = [pick(r["rows"], "observations", px, True) for r in groups[key]]
             rows = [row for row in rows if row]
             if not rows:
                 continue
 
-            def ms(field):
+            def ms(field, digits=3):
                 values = [row["metrics"][field] for row in rows]
                 mean = statistics.mean(values)
                 spread = (max(values) - min(values)) / 2 if len(values) > 1 else 0.0
-                return f"{mean:.3f} +- {spread:.3f}" if field not in ("IDSW", "num_tracker_ids", "CLR_FP", "CLR_FN") else f"{mean:.1f} +- {spread:.1f}"
+                return f"{mean:.{digits}f} +- {spread:.{digits}f}"
 
-            lines.append(f"| {key[0]} | {key[1]} | {key[2]} | {len(rows)} | {ms('HOTA')} | {ms('DetA')} | {ms('AssA')} | {ms('IDF1')} | {ms('IDSW')} | {ms('num_tracker_ids')} | {ms('CLR_FP')} | {ms('CLR_FN')} |")
+            lines.append(f"| {key[0]} | {key[1]} | {key[2]} | {len(rows)} | {ms('HOTA')} | {ms('AssA')} | {ms('MOTA')} | {ms('MOTP_px', 2)} | {ms('IDF1')} | {ms('IDSW', 1)} | {ms('Frag', 1)} |")
         lines.append("")
         lines.append("Curves (HOTA / IDF1 against drop rate, one line per noise and FP level):")
         lines.append("")
@@ -217,7 +223,7 @@ def main() -> None:
         lines.append("|---|---|---|" + "---|" * len(drops))
         for noise in sorted({k[1] for k in groups}):
             for fp in sorted({k[2] for k in groups}):
-                for metric in ("HOTA", "IDF1", "IDSW"):
+                for metric in ("HOTA", "AssA", "MOTA", "IDF1", "IDSW"):
                     cells = []
                     for d in drops:
                         rows = [pick(r["rows"], "observations", px, True) for r in groups.get((d, noise, fp), [])]
@@ -234,30 +240,29 @@ def main() -> None:
         region = clip == "flock"
         lines.append(f"## E5 parameters ({clip}, real detections, matched rows, against ground truth)")
         lines.append("")
-        lines.append("| max_age | tentative_threshold | HOTA | DetA | AssA | MOTA | IDF1 | IDSW | Frag | TP | FP | FN | ids | orphans |")
-        lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+        lines.append("| max_age | tentative_threshold | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |")
+        lines.append("|---|---|---|---|---|---|---|---|---|")
         entries = []
         for r in e5:
             params = r["manifest"].get("tracker", {}).get("params", {})
             entries.append((params.get("max_age"), params.get("tentative_threshold"), r))
         for max_age, tentative, r in sorted(entries, key=lambda e: (e[0] or 0, e[1] or 0)):
             row = pick(r["rows"], "observations", px, region)
-            diag = r["diag"].get(f"observations|{'region' if region else 'noregion'}", {})
-            lines.append(f"| {max_age} | {tentative} | {fmt(row, 'HOTA')} | {fmt(row, 'DetA')} | {fmt(row, 'AssA')} | {fmt(row, 'MOTA')} | {fmt(row, 'IDF1')} | {fmt(row, 'IDSW')} | {fmt(row, 'Frag')} | {fmt(row, 'CLR_TP')} | {fmt(row, 'CLR_FP')} | {fmt(row, 'CLR_FN')} | {fmt(row, 'num_tracker_ids')} | {diag.get('orphans', '-')} |")
+            lines.append(f"| {max_age} | {tentative} | {fmt(row, 'HOTA')} | {fmt(row, 'AssA')} | {fmt(row, 'MOTA')} | {px_fmt(row, 'MOTP_px')} | {fmt(row, 'IDF1')} | {fmt(row, 'IDSW')} | {fmt(row, 'Frag')} |")
         lines.append("")
 
     # sensitivity for the headline runs
     lines.append("## Sensitivity to the match distance (matched rows, overlay ignored for the flock)")
     lines.append("")
-    lines.append("| run | px | HOTA | DetA | AssA | IDF1 | IDSW | TP | FP | FN |")
-    lines.append("|---|---|---|---|---|---|---|---|---|---|")
+    lines.append("| run | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |")
+    lines.append("|---|---|---|---|---|---|---|---|---|")
     for clip, name in (("flock", "real_default"), ("flock", "gt_default"), ("turbine", "real_default"), ("turbine", "gt_default")):
         r = by_key.get((clip, name, "gt"))
         if r is None:
             continue
         for row in r["rows"]:
             if row["view"] == "observations" and row["ignore_region"] == (clip == "flock"):
-                lines.append(f"| {clip}/{name} | {row['match_px']:g} | {fmt(row, 'HOTA')} | {fmt(row, 'DetA')} | {fmt(row, 'AssA')} | {fmt(row, 'IDF1')} | {fmt(row, 'IDSW')} | {fmt(row, 'CLR_TP')} | {fmt(row, 'CLR_FP')} | {fmt(row, 'CLR_FN')} |")
+                lines.append(f"| {clip}/{name} | {row['match_px']:g} | {fmt(row, 'HOTA')} | {fmt(row, 'AssA')} | {fmt(row, 'MOTA')} | {px_fmt(row, 'MOTP_px')} | {fmt(row, 'IDF1')} | {fmt(row, 'IDSW')} | {fmt(row, 'Frag')} |")
     lines.append("")
 
     args.out.mkdir(parents=True, exist_ok=True)

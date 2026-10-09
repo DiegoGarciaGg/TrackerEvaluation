@@ -107,11 +107,6 @@ class Track:
         return max((update.detection_count for update in self.updates), default=0)
 
     @property
-    def matched_update_count(self) -> int:  # added
-        """Updates of this track that were matched to a detection (the ones that are observations)."""
-        return sum(1 for update in self.updates if update.is_matched)
-
-    @property
     def mean_confidence(self) -> float:
         return sum(update.confidence for update in self.updates) / len(self.updates) if self.updates else 0.0
 
@@ -178,10 +173,6 @@ class RunResult:
     @property
     def update_count(self) -> int:  # added
         return sum(len(track.updates) for track in self.tracks)
-
-    @property
-    def track_ids(self) -> tuple[str, ...]:  # added
-        return tuple(track.track_id for track in self.tracks)
 
 
 def reconstruct_tracks(track_updates: list[tuple[str, TrackUpdate]]) -> tuple[Track, ...]:

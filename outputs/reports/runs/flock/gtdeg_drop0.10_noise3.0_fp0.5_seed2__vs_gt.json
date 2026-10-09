@@ -54,8 +54,8 @@
    "run_manifest": {
     "run_key": "3acbd204c2d871cdb06af40fb88af97d5ec1ccf64761a0f1458f2be709bd4561",
     "label": "E4 flock drop0.10_noise3.0_fp0.5_seed2",
-    "created_utc": "2026-10-09T11:50:46+00:00",
-    "elapsed_seconds": 433.7,
+    "created_utc": "2026-10-09T11:56:33+00:00",
+    "elapsed_seconds": 465.7,
     "degradation": {
      "drop_rate": 0.1,
      "center_noise_px": 3.0,
@@ -166,6 +166,7 @@
    "polygons": []
   },
   "frame_range": null,
+  "reference_proximity_px": null,
   "num_timesteps": 1009,
   "trackeval": {
    "library": "TrackEval",
@@ -175,7 +176,7 @@
    "numpy_alias_shim": "np.float and np.int restored as float/int before import; sources unmodified",
    "installed_from": "/Users/diegogarciagonzalez/tracker-kit-Eval/.venv/lib/python3.12/site-packages/trackeval/__init__.py"
   },
-  "created_utc": "2026-10-09T11:54:54+00:00",
+  "created_utc": "2026-10-09T13:28:49+00:00",
   "candidate_output_sha256": "db8aa425beb6dbebafcc755cdecf250a97817bc5c8ae3d50500710620c2ce4b7"
  },
  "rows": [

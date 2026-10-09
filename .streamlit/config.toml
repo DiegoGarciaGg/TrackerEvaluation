@@ -1,0 +1,11 @@
+# Spoor design system, light theme (tokens converted from OKLCH to hex).
+[theme]
+base = "light"
+primaryColor = "#31149C"            # accent-foreground / ring: deep indigo, used for controls and highlights
+backgroundColor = "#FBF7F4"         # background: warm off-white page
+secondaryBackgroundColor = "#FFFFFF" # card: pure white sidebar and panels
+textColor = "#27160C"               # foreground
+font = "sans serif"
+
+[server]
+headless = true

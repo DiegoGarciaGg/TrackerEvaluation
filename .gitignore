@@ -1,3 +1,21 @@
+# Python
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# videos: large and reproducible from the originals (data/) or from run_tracker.py (out/, results/)
+*.mp4
+*.mkv
+out/
+
+# evaluation outputs that are regenerated from outputs/runs with evaluation/batch_report.py
+outputs/reports/runs/
+outputs/store/
+# degraded detection CSVs are deterministic from ground_truth/ + manifest (seed, params); keep the manifests
+outputs/detections/**/*.csv
+# keep: outputs/runs/ (tracker outputs + manifests, hours of compute), outputs/reports/SUMMARY.md,
+# outputs/phase*/ summaries, outputs/INFORME_GENERAL.md, ground_truth/

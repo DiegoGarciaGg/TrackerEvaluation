@@ -95,13 +95,15 @@ def sequence(gt, tr, px: float) -> dict:
     return data
 
 
-def score(data: dict) -> dict:
+def score(data: dict, px: float) -> dict:
     hota = HOTA().eval_sequence(data)
     clear = CLEAR({"THRESHOLD": 0.5, "PRINT_CONFIG": False}).eval_sequence(data)
     ident = Identity({"THRESHOLD": 0.5, "PRINT_CONFIG": False}).eval_sequence(data)
     return {
         "HOTA": float(np.mean(hota["HOTA"])), "DetA": float(np.mean(hota["DetA"])), "AssA": float(np.mean(hota["AssA"])),
-        "MOTA": float(clear["MOTA"]), "IDF1": float(ident["IDF1"]), "IDSW": int(clear["IDSW"]), "Frag": int(clear["Frag"]),
+        "AssRe": float(np.mean(hota["AssRe"])), "AssPr": float(np.mean(hota["AssPr"])), "OWTA": float(np.mean(hota["OWTA"])),
+        "MOTA": float(clear["MOTA"]), "MOTP_px": 2.0 * px * (1.0 - float(clear["MOTP"])),
+        "IDF1": float(ident["IDF1"]), "IDSW": int(clear["IDSW"]), "Frag": int(clear["Frag"]),
         "TP": int(clear["CLR_TP"]), "FP": int(clear["CLR_FP"]), "FN": int(clear["CLR_FN"]),
         "gt_ids": data["num_gt_ids"], "track_ids": data["num_tracker_ids"], "rows": data["num_tracker_dets"],
     }
@@ -118,13 +120,12 @@ def main() -> None:
     args = parser.parse_args()
 
     gt = filter_entries(load_gt(args.gt), args.ignore_rect, args.frames)
-    print(f"{'file':60s} {'px':>4} {'HOTA':>6} {'DetA':>6} {'AssA':>6} {'MOTA':>7} {'IDF1':>6} {'IDSW':>5} {'Frag':>5} {'TP':>6} {'FP':>6} {'FN':>6} {'ids':>4} {'rows':>6}")
+    print(f"{'file':60s} {'px':>4} {'HOTA':>6} {'AssA':>6} {'MOTA':>7} {'MOTPpx':>6} {'IDF1':>6} {'IDSW':>5} {'Frag':>5}")
     for path in args.tracks:
         tr = filter_entries(load_tracks(path, args.matched_only), args.ignore_rect, args.frames)
         for px in args.px:
-            r = score(sequence(gt, tr, px))
-            print(f"{str(path)[-60:]:60s} {px:4g} {r['HOTA']:6.3f} {r['DetA']:6.3f} {r['AssA']:6.3f} {r['MOTA']:7.3f} {r['IDF1']:6.3f} "
-                  f"{r['IDSW']:5d} {r['Frag']:5d} {r['TP']:6d} {r['FP']:6d} {r['FN']:6d} {r['track_ids']:4d} {r['rows']:6d}")
+            r = score(sequence(gt, tr, px), px)
+            print(f"{str(path)[-60:]:60s} {px:4g} {r['HOTA']:6.3f} {r['AssA']:6.3f} {r['MOTA']:7.3f} {r['MOTP_px']:6.2f} {r['IDF1']:6.3f} {r['IDSW']:5d} {r['Frag']:5d}")
 
 
 if __name__ == "__main__":

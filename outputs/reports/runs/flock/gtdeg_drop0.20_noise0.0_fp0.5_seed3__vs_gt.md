@@ -26,26 +26,26 @@ Reference: predictor=gt claim=accuracy curation=independent manual annotation (n
 - ignore region 'burnt-in timestamp overlay, top-left': entries with center inside it are dropped on both sides before scoring
 
 ## Metrics (center-distance matching)
-| view | region | px | ref | cand | HOTA | DetA | AssA | LocA px | HOTA@a.5 | MOTA | MOTP px | IDSW | Frag | IDF1 | IDP | IDR | Re | Pr | TP | FN | FP | MT | PT | ML |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| observations | none | 4 | 10142 | 8041 | 0.353 | 0.782 | 0.159 | 0.01 | 0.353 | 0.667 | 0.01 | 1183 | 1640.0 | 0.298 | 0.337 | 0.267 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | none | 6 | 10142 | 8041 | 0.353 | 0.781 | 0.159 | 0.02 | 0.353 | 0.667 | 0.02 | 1184 | 1639.0 | 0.298 | 0.337 | 0.267 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | none | 8 | 10142 | 8041 | 0.353 | 0.777 | 0.160 | 0.04 | 0.352 | 0.668 | 0.06 | 1168 | 1636.0 | 0.299 | 0.338 | 0.268 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | none | 12 | 10142 | 8041 | 0.353 | 0.762 | 0.163 | 0.19 | 0.352 | 0.673 | 0.45 | 1094 | 1601.0 | 0.311 | 0.352 | 0.279 | 0.787 | 0.993 | 7981 | 2161 | 60 | 7 | 18 | 0 |
-| observations | ignore | 4 | 10142 | 8041 | 0.353 | 0.782 | 0.159 | 0.01 | 0.353 | 0.667 | 0.01 | 1183 | 1640.0 | 0.298 | 0.337 | 0.267 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | ignore | 6 | 10142 | 8041 | 0.353 | 0.781 | 0.159 | 0.02 | 0.353 | 0.667 | 0.02 | 1184 | 1639.0 | 0.298 | 0.337 | 0.267 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | ignore | 8 | 10142 | 8041 | 0.353 | 0.777 | 0.160 | 0.04 | 0.352 | 0.668 | 0.06 | 1168 | 1636.0 | 0.299 | 0.338 | 0.268 | 0.788 | 0.994 | 7994 | 2148 | 47 | 6 | 19 | 0 |
-| observations | ignore | 12 | 10142 | 8041 | 0.353 | 0.762 | 0.163 | 0.19 | 0.352 | 0.673 | 0.45 | 1094 | 1601.0 | 0.311 | 0.352 | 0.279 | 0.787 | 0.993 | 7981 | 2161 | 60 | 7 | 18 | 0 |
-| updates | none | 4 | 10142 | 10388 | 0.332 | 0.684 | 0.161 | 0.19 | 0.329 | 0.478 | 0.09 | 1198 | 1558.0 | 0.280 | 0.277 | 0.283 | 0.810 | 0.791 | 8218 | 1924 | 2170 | 11 | 14 | 0 |
-| updates | none | 6 | 10142 | 10388 | 0.351 | 0.723 | 0.170 | 0.38 | 0.357 | 0.564 | 0.36 | 1201 | 1210.0 | 0.298 | 0.295 | 0.302 | 0.853 | 0.833 | 8656 | 1486 | 1732 | 24 | 1 | 0 |
-| updates | none | 8 | 10142 | 10388 | 0.361 | 0.742 | 0.176 | 0.53 | 0.380 | 0.654 | 0.72 | 1162 | 869.0 | 0.315 | 0.312 | 0.319 | 0.896 | 0.875 | 9090 | 1052 | 1298 | 25 | 0 | 0 |
-| updates | none | 12 | 10142 | 10388 | 0.372 | 0.755 | 0.184 | 0.82 | 0.387 | 0.680 | 1.19 | 1075 | 758.0 | 0.331 | 0.327 | 0.335 | 0.905 | 0.884 | 9179 | 963 | 1209 | 25 | 0 | 0 |
-| updates | ignore | 4 | 10142 | 10388 | 0.332 | 0.684 | 0.161 | 0.19 | 0.329 | 0.478 | 0.09 | 1198 | 1558.0 | 0.280 | 0.277 | 0.283 | 0.810 | 0.791 | 8218 | 1924 | 2170 | 11 | 14 | 0 |
-| updates | ignore | 6 | 10142 | 10388 | 0.351 | 0.723 | 0.170 | 0.38 | 0.357 | 0.564 | 0.36 | 1201 | 1210.0 | 0.298 | 0.295 | 0.302 | 0.853 | 0.833 | 8656 | 1486 | 1732 | 24 | 1 | 0 |
-| updates | ignore | 8 | 10142 | 10388 | 0.361 | 0.742 | 0.176 | 0.53 | 0.380 | 0.654 | 0.72 | 1162 | 869.0 | 0.315 | 0.312 | 0.319 | 0.896 | 0.875 | 9090 | 1052 | 1298 | 25 | 0 | 0 |
-| updates | ignore | 12 | 10142 | 10388 | 0.372 | 0.755 | 0.184 | 0.82 | 0.387 | 0.680 | 1.19 | 1075 | 758.0 | 0.331 | 0.327 | 0.335 | 0.905 | 0.884 | 9179 | 963 | 1209 | 25 | 0 | 0 |
+| view | region | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |
+|---|---|---|---|---|---|---|---|---|---|
+| observations | none | 4 | 0.353 | 0.159 | 0.667 | 0.01 | 0.298 | 1183 | 1640.0 |
+| observations | none | 6 | 0.353 | 0.159 | 0.667 | 0.02 | 0.298 | 1184 | 1639.0 |
+| observations | none | 8 | 0.353 | 0.160 | 0.668 | 0.06 | 0.299 | 1168 | 1636.0 |
+| observations | none | 12 | 0.353 | 0.163 | 0.673 | 0.45 | 0.311 | 1094 | 1601.0 |
+| observations | ignore | 4 | 0.353 | 0.159 | 0.667 | 0.01 | 0.298 | 1183 | 1640.0 |
+| observations | ignore | 6 | 0.353 | 0.159 | 0.667 | 0.02 | 0.298 | 1184 | 1639.0 |
+| observations | ignore | 8 | 0.353 | 0.160 | 0.668 | 0.06 | 0.299 | 1168 | 1636.0 |
+| observations | ignore | 12 | 0.353 | 0.163 | 0.673 | 0.45 | 0.311 | 1094 | 1601.0 |
+| updates | none | 4 | 0.332 | 0.161 | 0.478 | 0.09 | 0.280 | 1198 | 1558.0 |
+| updates | none | 6 | 0.351 | 0.170 | 0.564 | 0.36 | 0.298 | 1201 | 1210.0 |
+| updates | none | 8 | 0.361 | 0.176 | 0.654 | 0.72 | 0.315 | 1162 | 869.0 |
+| updates | none | 12 | 0.372 | 0.184 | 0.680 | 1.19 | 0.331 | 1075 | 758.0 |
+| updates | ignore | 4 | 0.332 | 0.161 | 0.478 | 0.09 | 0.280 | 1198 | 1558.0 |
+| updates | ignore | 6 | 0.351 | 0.170 | 0.564 | 0.36 | 0.298 | 1201 | 1210.0 |
+| updates | ignore | 8 | 0.361 | 0.176 | 0.654 | 0.72 | 0.315 | 1162 | 869.0 |
+| updates | ignore | 12 | 0.372 | 0.184 | 0.680 | 1.19 | 0.331 | 1075 | 758.0 |
 
-HOTA/DetA/AssA are TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T); HOTA@a.5 is the value at the configured px. LocA px and MOTP px are mean center distance over matches. Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. CLEAR's Frag counts every resumption of tracking after an interruption, including frames where the reference object itself is absent, so a reference with gaps gives Frag > 0 even to a perfect candidate (the flock GT has 111 such gaps), while an interruption that falls on frames with no candidate entry at all is not counted by CLEAR; the diagnostics' fragmentation below counts only interruptions within the object's labelled frames, whatever the rest of the frame holds.
+HOTA = sqrt(DetA * AssA), TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T). AssA = association accuracy (one bird, one id). MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. IDSW = identity switches, Frag = fragmentations (CLEAR definition; counts resumptions after any interruption, including frames where the reference object itself is absent, so the flock GT's 111 gaps give Frag > 0 even to a perfect candidate). Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. All other TrackEval fields (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN) are in the JSON report.
 
 ## Diagnostics: view=observations, region=none, match 8 px
 - reference objects: 25; candidate ids: 28; matched pairs: 7994; unmatched reference entries: 2148; unmatched candidate entries: 47

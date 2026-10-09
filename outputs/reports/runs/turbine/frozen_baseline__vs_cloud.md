@@ -22,14 +22,14 @@ Reference: predictor=cloud claim=parity curation=n/a
 - candidate is in the 6-column baseline format: coasting rows are indistinguishable, so only the 'updates' view (every row as written) is scored; matched-rows-only needs the 10-column format
 
 ## Metrics (center-distance matching)
-| view | region | px | ref | cand | HOTA | DetA | AssA | LocA px | HOTA@a.5 | MOTA | MOTP px | IDSW | Frag | IDF1 | IDP | IDR | Re | Pr | TP | FN | FP | MT | PT | ML |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| updates | none | 4 | 397 | 1822 | 0.353 | 0.184 | 0.676 | 0.08 | 0.357 | -2.836 | 0.09 | 0 | 8.0 | 0.314 | 0.191 | 0.877 | 0.877 | 0.191 | 348 | 49 | 1474 | 5 | 1 | 2 |
-| updates | none | 6 | 397 | 1822 | 0.356 | 0.186 | 0.684 | 0.09 | 0.359 | -2.831 | 0.10 | 0 | 8.0 | 0.315 | 0.192 | 0.879 | 0.879 | 0.192 | 349 | 48 | 1473 | 5 | 1 | 2 |
-| updates | none | 8 | 397 | 1822 | 0.357 | 0.186 | 0.684 | 0.10 | 0.359 | -2.831 | 0.10 | 0 | 8.0 | 0.315 | 0.192 | 0.879 | 0.879 | 0.192 | 349 | 48 | 1473 | 5 | 1 | 2 |
-| updates | none | 12 | 397 | 1822 | 0.358 | 0.187 | 0.686 | 0.14 | 0.359 | -2.826 | 0.13 | 0 | 8.0 | 0.315 | 0.192 | 0.882 | 0.882 | 0.192 | 350 | 47 | 1472 | 5 | 1 | 2 |
+| view | region | px | HOTA | AssA | MOTA | MOTP px | IDF1 | IDSW | Frag |
+|---|---|---|---|---|---|---|---|---|---|
+| updates | none | 4 | 0.353 | 0.676 | -2.836 | 0.09 | 0.314 | 0 | 8.0 |
+| updates | none | 6 | 0.356 | 0.684 | -2.831 | 0.10 | 0.315 | 0 | 8.0 |
+| updates | none | 8 | 0.357 | 0.684 | -2.831 | 0.10 | 0.315 | 0 | 8.0 |
+| updates | none | 12 | 0.358 | 0.686 | -2.826 | 0.13 | 0.315 | 0 | 8.0 |
 
-HOTA/DetA/AssA are TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T); HOTA@a.5 is the value at the configured px. LocA px and MOTP px are mean center distance over matches. Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. CLEAR's Frag counts every resumption of tracking after an interruption, including frames where the reference object itself is absent, so a reference with gaps gives Frag > 0 even to a perfect candidate (the flock GT has 111 such gaps), while an interruption that falls on frames with no candidate entry at all is not counted by CLEAR; the diagnostics' fragmentation below counts only interruptions within the object's labelled frames, whatever the rest of the frame holds.
+HOTA = sqrt(DetA * AssA), TrackEval's mean over 19 alphas (distances 0.05 T .. 0.95 T). AssA = association accuracy (one bird, one id). MOTA = 1 - (FN + FP + IDSW) / labelled boxes, can be negative. MOTP px = mean center distance over matched pairs. IDF1 = identity F1. IDSW = identity switches, Frag = fragmentations (CLEAR definition; counts resumptions after any interruption, including frames where the reference object itself is absent, so the flock GT's 111 gaps give Frag > 0 even to a perfect candidate). Matched-rows-only (`observations`) excludes coasting rows; `updates` scores every row as written. All other TrackEval fields (DetA, DetRe, DetPr, AssRe, AssPr, OWTA, LocA, IDP, IDR, MT/PT/ML, TP/FP/FN) are in the JSON report.
 
 ## Diagnostics: view=updates, region=none, match 8 px
 - reference objects: 8; candidate ids: 35; matched pairs: 349; unmatched reference entries: 48; unmatched candidate entries: 1473
