@@ -1,0 +1,56 @@
+[
+ {
+  "tracker": "simplesort",
+  "out": "benchmark/outputs/runs/semrev/simplesort/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "simplesort gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "sort",
+  "out": "benchmark/outputs/runs/semrev/sort/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "sort gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "bytetrack",
+  "out": "benchmark/outputs/runs/semrev/bytetrack/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "bytetrack gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "ocsort",
+  "out": "benchmark/outputs/runs/semrev/ocsort/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "ocsort gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "botsort",
+  "out": "benchmark/outputs/runs/semrev/botsort/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "botsort gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "cbiou",
+  "out": "benchmark/outputs/runs/semrev/cbiou/gt_default/tracks.csv",
+  "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+  "detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "cbiou gt-as-detections, semrev",
+  "allow_partial_coverage": true
+ }
+]

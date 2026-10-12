@@ -1,0 +1,172 @@
+[
+ {
+  "tracker": "sort",
+  "out": "benchmark/outputs/runs/flock/sort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "label": "sort real detections, library defaults"
+ },
+ {
+  "tracker": "sort",
+  "out": "benchmark/outputs/runs/flock/sort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "sort gt-as-detections, library defaults",
+  "allow_partial_coverage": false
+ },
+ {
+  "tracker": "bytetrack",
+  "out": "benchmark/outputs/runs/flock/bytetrack/real_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "label": "bytetrack real detections, library defaults"
+ },
+ {
+  "tracker": "bytetrack",
+  "out": "benchmark/outputs/runs/flock/bytetrack/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "bytetrack gt-as-detections, library defaults",
+  "allow_partial_coverage": false
+ },
+ {
+  "tracker": "ocsort",
+  "out": "benchmark/outputs/runs/flock/ocsort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "label": "ocsort real detections, library defaults"
+ },
+ {
+  "tracker": "ocsort",
+  "out": "benchmark/outputs/runs/flock/ocsort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "ocsort gt-as-detections, library defaults",
+  "allow_partial_coverage": false
+ },
+ {
+  "tracker": "botsort",
+  "out": "benchmark/outputs/runs/flock/botsort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "label": "botsort real detections, library defaults"
+ },
+ {
+  "tracker": "botsort",
+  "out": "benchmark/outputs/runs/flock/botsort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "botsort gt-as-detections, library defaults",
+  "allow_partial_coverage": false
+ },
+ {
+  "tracker": "cbiou",
+  "out": "benchmark/outputs/runs/flock/cbiou/real_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+  "detection_source": "real",
+  "label": "cbiou real detections, library defaults"
+ },
+ {
+  "tracker": "cbiou",
+  "out": "benchmark/outputs/runs/flock/cbiou/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+  "detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "cbiou gt-as-detections, library defaults",
+  "allow_partial_coverage": false
+ },
+ {
+  "tracker": "sort",
+  "out": "benchmark/outputs/runs/turbine/sort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "label": "sort real detections, library defaults"
+ },
+ {
+  "tracker": "sort",
+  "out": "benchmark/outputs/runs/turbine/sort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "sort gt-as-detections, library defaults",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "bytetrack",
+  "out": "benchmark/outputs/runs/turbine/bytetrack/real_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "label": "bytetrack real detections, library defaults"
+ },
+ {
+  "tracker": "bytetrack",
+  "out": "benchmark/outputs/runs/turbine/bytetrack/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "bytetrack gt-as-detections, library defaults",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "ocsort",
+  "out": "benchmark/outputs/runs/turbine/ocsort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "label": "ocsort real detections, library defaults"
+ },
+ {
+  "tracker": "ocsort",
+  "out": "benchmark/outputs/runs/turbine/ocsort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "ocsort gt-as-detections, library defaults",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "botsort",
+  "out": "benchmark/outputs/runs/turbine/botsort/real_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "label": "botsort real detections, library defaults"
+ },
+ {
+  "tracker": "botsort",
+  "out": "benchmark/outputs/runs/turbine/botsort/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "botsort gt-as-detections, library defaults",
+  "allow_partial_coverage": true
+ },
+ {
+  "tracker": "cbiou",
+  "out": "benchmark/outputs/runs/turbine/cbiou/real_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+  "detection_source": "real",
+  "label": "cbiou real detections, library defaults"
+ },
+ {
+  "tracker": "cbiou",
+  "out": "benchmark/outputs/runs/turbine/cbiou/gt_default/tracks.csv",
+  "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+  "detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+  "detection_source": "gt",
+  "label": "cbiou gt-as-detections, library defaults",
+  "allow_partial_coverage": true
+ }
+]

@@ -1,3 +1,11 @@
 opencv-python-headless
 numpy
 scipy
+# evaluation and dashboard (install TrackEval from GitHub, see evaluation/README.md)
+pytest
+streamlit
+plotly
+# alternative trackers (Roboflow Trackers, Apache 2.0); installed with --no-deps to keep opencv-python-headless
+trackers==2.6.0
+supervision
+matplotlib

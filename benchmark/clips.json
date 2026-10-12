@@ -1,0 +1,57 @@
+{
+  "flock": {
+    "video_id": "20251012_164031_1DAC",
+    "title": "Flock (20251012_164031_1DAC)",
+    "video": "tracker_kit/data/20251012_164031_1DAC.mp4",
+    "detections": "tracker_kit/data/20251012_164031_1DAC_detections.csv",
+    "cloud": "tracker_kit/data/20251012_164031_1DAC_cloud_reference_tracks.csv",
+    "gt_tracks": "benchmark/ground_truth/20251012_164031_1DAC_reference_tracks_corrected.csv",
+    "gt_detections": "benchmark/ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+    "frame_count": 1009,
+    "ignore_rects": [
+      [
+        0,
+        0,
+        721,
+        400
+      ]
+    ],
+    "ignore_label": "burnt-in timestamp overlay, top-left",
+    "gt_frames": null,
+    "note": "frames 4001..5009 of the original; 25 labelled birds (first flock only); portrait 2160x3840"
+  },
+  "turbine": {
+    "video_id": "20250920_063942_6C42",
+    "title": "Turbine (20250920_063942_6C42)",
+    "video": "tracker_kit/data/20250920_063942_6C42.mp4",
+    "detections": "tracker_kit/data/20250920_063942_6C42_detections.csv",
+    "cloud": "tracker_kit/data/20250920_063942_6C42_cloud_reference_tracks.csv",
+    "gt_tracks": "benchmark/ground_truth/20250920_063942_6C42_reference_tracks_corrected.csv",
+    "gt_detections": "benchmark/ground_truth/20250920_063942_6C42_detections_corrected.csv",
+    "frame_count": 671,
+    "ignore_rects": [],
+    "ignore_label": "",
+    "gt_frames": [
+      53,
+      293
+    ],
+    "note": "frames 2000..2670 of the original; one labelled bird over frames 53..293; portrait 2160x3840"
+  },
+  "semrev": {
+    "video_id": "semrev_collision_20250419_073201_2B6B_176-196",
+    "title": "Semrev collision (20250419_073201_2B6B, 176-196 s)",
+    "video": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+    "detections": null,
+    "cloud": null,
+    "gt_tracks": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_reference_tracks_corrected.csv",
+    "gt_detections": "benchmark/ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+    "frame_count": 500,
+    "ignore_rects": [],
+    "ignore_label": "",
+    "gt_frames": [
+      32,
+      457
+    ],
+    "note": "landscape 3840x2160, 500 frames; two labelled birds (one over frames 32..457, one over 359..409); no detector output, so only ground-truth boxes can be fed to the trackers"
+  }
+}
