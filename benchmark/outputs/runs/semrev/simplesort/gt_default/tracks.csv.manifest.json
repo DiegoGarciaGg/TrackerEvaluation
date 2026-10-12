@@ -1,0 +1,70 @@
+{
+  "run_key": "78e5564a0042fe31004ad85e0cbffe77d362fa660c0cd64d35701d1ee5f6bb51",
+  "label": "simplesort gt-as-detections, semrev",
+  "created_utc": "2026-10-12T11:36:02+00:00",
+  "command": "experiments/sweep.py --spec experiments/specs/semrev_gt.json --jobs 3",
+  "inputs": {
+    "video": {
+      "path": "ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+      "sha256": "304e8b6523c1a2b260a9cc7201b1849d79c1569c0abadcd4454bd50cc4ff625f",
+      "frame_count": 500,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+      "sha256": "4df3b0ce1d6913b0068bec4e125d7653d888a35f27e26a30855dc366c9aef08c",
+      "source": "gt",
+      "details": {},
+      "rows": 477,
+      "frame_alignment": "check relaxed (--allow-partial-coverage): CSV frames 32..457 lie inside the video's 0..499; absent frames are treated as empty"
+    }
+  },
+  "tracker": {
+    "algorithm": "simplesort",
+    "library": "spoor tracker-kit (tracker/)",
+    "params": {
+      "euclidean_matching_threshold": 250.0,
+      "max_age": 30,
+      "tentative_threshold": 3
+    },
+    "source_dir": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker",
+    "source_hash": "7b65976a888fbd3cf4d81f4bd6d42ce5b4115c3276dc71e54e88652c3be5baa4",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/semrev/gt_default/tracks.csv",
+    "sha256": "eafe061f3523f369c35271d332f6fef960e7ea7351e716777cdfea4108ceffc9",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 531,
+    "matched_rows": 473,
+    "coasting_rows": 58,
+    "track_ids": 2,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "detections carry no confidence; matched rows are observations with confidence 1.0"
+    }
+  },
+  "baseline_check": null,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 11.3,
+  "reused": false
+}

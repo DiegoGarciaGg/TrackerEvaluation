@@ -1,0 +1,74 @@
+{
+  "run_key": "b6ae81a192c746f187748521feaf125a676bd5bb5a5a7f144ff3d0e556e78e8c",
+  "label": "bytetrack gt-as-detections, library defaults",
+  "created_utc": "2026-10-12T11:10:32+00:00",
+  "command": "experiments/sweep.py --spec experiments/specs/library_trackers.json --jobs 4",
+  "inputs": {
+    "video": {
+      "path": "data/20251012_164031_1DAC.mp4",
+      "sha256": "fbc117d9da3fce2eea14268ad8017d5415bc9baeb116531881c1fb5d7b3ebe9e",
+      "frame_count": 1009,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "ground_truth/20251012_164031_1DAC_detections_corrected.csv",
+      "sha256": "503255dd69b114a560950b253e63d106709032fe55e84c9c6674b120bc271d08",
+      "source": "gt",
+      "details": {},
+      "rows": 10142,
+      "frame_alignment": "run_tracker.check_frame_alignment passed"
+    }
+  },
+  "tracker": {
+    "algorithm": "bytetrack",
+    "library": "roboflow trackers 2.6.0",
+    "params": {
+      "lost_track_buffer": 30,
+      "frame_rate": 25.0,
+      "track_activation_threshold": 0.7,
+      "minimum_consecutive_frames": 2,
+      "minimum_iou_threshold": 0.1,
+      "high_conf_det_threshold": 0.6,
+      "iou": null
+    },
+    "source_dir": "site-packages/trackers",
+    "source_hash": "roboflow trackers 2.6.0",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/flock/bytetrack_gt_default/tracks.csv",
+    "sha256": "c08bd881d5ba53d0969340d36408ae5fa45e684be5fd4c78638ca3b0db33f3f0",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 10076,
+    "matched_rows": 10076,
+    "coasting_rows": 0,
+    "track_ids": 38,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "detections carry no confidence; matched rows are observations with confidence 1.0; no confidence passed to the library (ByteTrack falls back to single-stage matching)"
+    }
+  },
+  "baseline_check": null,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 4.8,
+  "reused": false
+}

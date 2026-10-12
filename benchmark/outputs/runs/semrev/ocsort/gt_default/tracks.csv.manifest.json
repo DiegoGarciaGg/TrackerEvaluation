@@ -1,0 +1,75 @@
+{
+  "run_key": "1bbe205c24dbfedc1fb2e28e4ce12bab0792f0a231cd322def3c2c0da8a89d57",
+  "label": "ocsort gt-as-detections, semrev",
+  "created_utc": "2026-10-12T11:35:53+00:00",
+  "command": "experiments/sweep.py --spec experiments/specs/semrev_gt.json --jobs 3",
+  "inputs": {
+    "video": {
+      "path": "ground_truth/semrev_collision_20250419_073201_2B6B_176-196.mp4",
+      "sha256": "304e8b6523c1a2b260a9cc7201b1849d79c1569c0abadcd4454bd50cc4ff625f",
+      "frame_count": 500,
+      "fps": 25.0
+    },
+    "detections": {
+      "path": "ground_truth/semrev_collision_20250419_073201_2B6B_176-196_detections_corrected.csv",
+      "sha256": "4df3b0ce1d6913b0068bec4e125d7653d888a35f27e26a30855dc366c9aef08c",
+      "source": "gt",
+      "details": {},
+      "rows": 477,
+      "frame_alignment": "check relaxed (--allow-partial-coverage): CSV frames 32..457 lie inside the video's 0..499; absent frames are treated as empty"
+    }
+  },
+  "tracker": {
+    "algorithm": "ocsort",
+    "library": "roboflow trackers 2.6.0",
+    "params": {
+      "lost_track_buffer": 30,
+      "frame_rate": 25.0,
+      "minimum_consecutive_frames": 3,
+      "minimum_iou_threshold": 0.3,
+      "direction_consistency_weight": 0.2,
+      "high_conf_det_threshold": 0.6,
+      "delta_t": 3,
+      "iou": null
+    },
+    "source_dir": "site-packages/trackers",
+    "source_hash": "roboflow trackers 2.6.0",
+    "run_tracker_sha256": "fd9eb425e9eb2a73798fbc5d75a84e1e60b1f46b9fd5263fc98d1a5a200be428",
+    "driver": "experiments/run_experiment.py (no frames decoded, no annotated video)"
+  },
+  "output": {
+    "path": "outputs/runs/semrev/ocsort_gt_default/tracks.csv",
+    "sha256": "c4a47ff85c792bc97f989e7128138ce7b0978facf0b0964b7a57787603d2b823",
+    "columns": [
+      "frame_number",
+      "track_id",
+      "x",
+      "y",
+      "w",
+      "h",
+      "matched",
+      "detection_count",
+      "missed_frame_count",
+      "age_frames"
+    ],
+    "rows": 363,
+    "matched_rows": 363,
+    "coasting_rows": 0,
+    "track_ids": 5,
+    "column_semantics": {
+      "matched": "1 if track.detections[-1].frame_number == frame_number (kit age == 1), else coasting",
+      "detection_count": "len(track.detections) after this frame's update",
+      "missed_frame_count": "consecutive unmatched frames up to and including this one (kit age - 1)",
+      "age_frames": "frame_number - first detection frame + 1",
+      "confidence_policy": "detections carry no confidence; matched rows are observations with confidence 1.0; no confidence passed to the library (ByteTrack falls back to single-stage matching)"
+    }
+  },
+  "baseline_check": null,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 0.4,
+  "reused": false
+}
