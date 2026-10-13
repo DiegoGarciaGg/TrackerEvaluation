@@ -35,9 +35,25 @@ Controls: video, detections given to the trackers (detector output or ground-tru
 never mixed in one table), and under "Evaluation settings" the reference, the rows scored and
 the match distance.
 
+## Deploying it (Streamlit Community Cloud)
+
+The dashboard is a plain Streamlit app, so it deploys straight from GitHub:
+
+1. Push the repo (the branch you want to show).
+2. Go to share.streamlit.io, sign in with GitHub, click "Create app", pick the repository and
+   branch, and set the main file path to `dashboard/dashboard.py`.
+3. Dependencies: `dashboard/requirements.txt` (streamlit, plotly, pandas, numpy) is next to the
+   entrypoint, so Community Cloud uses it instead of the heavier root `requirements.txt`.
+   The theme is read from `.streamlit/config.toml` at the repo root (Cloud runs from the root).
+
+What the deployed page shows: the tables, the charts and the complete-track images, because
+`summary_rows.json`, `clips.json` and the `tracks.png` files are committed. The videos are not
+(they are gitignored, hundreds of megabytes), so the video section shows a note instead; to
+publish videos, store them with Git LFS or on external hosting and point `st.video` at the URL.
+
 ## Design
 
-Spoor light theme in `.streamlit/config.toml` (tokens converted from OKLCH: page `#FBF7F4`,
+Spoor light theme in `.streamlit/config.toml` at the repo root (tokens converted from OKLCH: page `#FBF7F4`,
 cards white, indigo `#31149C`, lavender `#C9BCFF`), EB Garamond for headings and Geist for
 text, loaded from Google Fonts in the CSS block at the top of `dashboard.py`. The Streamlit
 toolbar (Deploy, menu) is hidden by `toolbarMode = "minimal"`.

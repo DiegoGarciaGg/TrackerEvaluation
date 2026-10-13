@@ -8,7 +8,7 @@ Reads benchmark/outputs/reports/summary_rows.json (written by benchmark/evaluati
 and shows the tracks.png and tracked.mp4 next to each run (written by benchmark/experiments/render_all.py). Nothing here computes
 metrics. A new tracker appears automatically once its run is evaluated.
 
-Design: Spoor light theme (.streamlit/config.toml), EB Garamond headings, Geist text. Charts use
+Design: Spoor light theme (.streamlit/config.toml at the repo root, where Streamlit looks for it), EB Garamond headings, Geist text. Charts use
 one hue; the Spoor tracker is emphasised in indigo and the others sit in stone grey.
 """
 
@@ -227,8 +227,10 @@ with v2:
     composite = VIDEOS / clip / f"{a.tracker}_{a.run}__vs__{b.tracker}_{b.run}.mp4"
     if composite.exists():
         st.video(str(composite))
-    elif a.run == b.run:
+    elif (a.tracker, a.run) == (b.tracker, b.run):
         st.info("Pick two different trackers.")
+    elif not CLIPS[clip]["video"].exists():
+        st.info("The clip itself is not available here (videos are not in the repository), so this pair cannot be rendered. Render it locally and commit or upload the result.")
     elif st.button("Render side-by-side video (about a minute)"):
         from experiments.render_video import render
 
