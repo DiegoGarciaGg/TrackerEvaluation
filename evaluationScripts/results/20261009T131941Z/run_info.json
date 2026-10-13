@@ -1,0 +1,917 @@
+{
+  "timestamp_utc": "2026-10-09T13:23:22.580964+00:00",
+  "command": [
+    "evaluation/new/scripts/evaluate.py",
+    "--config",
+    "evaluation/new/configs/local.yaml"
+  ],
+  "git_commit": "5f9a24bd9323ca04944a99b8e5e3520ad7898c8f",
+  "git_dirty_files": [],
+  "trackeval_version": "1.0.dev1",
+  "trackeval_source": "https://github.com/JonathonLuiten/TrackEval",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "python": "3.14.7",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "n_videos": 2,
+  "videos": [
+    "20250920_063942_6C42",
+    "20251012_164031_1DAC"
+  ],
+  "n_runs": 63,
+  "runs": [
+    {
+      "input": "gt",
+      "experiment": "appearance",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/appearance/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/appearance/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/appearance",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/appearance"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "baseline",
+      "aliases": [
+        "kalman_normal",
+        "original",
+        "test_association_original"
+      ],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/baseline/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/baseline/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/baseline",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/baseline"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "exp02_tentative_5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp02_tentative_5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp02_tentative_5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp02_tentative_5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp02_tentative_5"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "exp03_max_age_15",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp03_max_age_15/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp03_max_age_15/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp03_max_age_15",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp03_max_age_15"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "exp04_max-age15_tentative5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp04_max-age15_tentative5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp04_max-age15_tentative5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp04_max-age15_tentative5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/exp04_max-age15_tentative5"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "fused",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "fused_color",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_color/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_color/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_color",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_color"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "fused_contrast",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_contrast/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_contrast/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_contrast",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_contrast"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "fused_patch",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_patch/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_patch/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_patch",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_patch"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "fused_w025",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_w025/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_w025/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_w025",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/fused_w025"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t10_motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t10_motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t10_motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t10_motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t10_motion"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_appearance",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_appearance/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_appearance/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_appearance",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_appearance"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_fused",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_fused_color",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_color/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_color/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_color",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_color"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_fused_contrast",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_contrast/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_contrast/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_contrast",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_contrast"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_fused_patch",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_patch/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_patch/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_patch",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_patch"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_fused_w025",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_w025/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_w025/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_w025",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_fused_w025"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_motion"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "k4t20_original",
+      "aliases": [
+        "kalman4d_tentative20"
+      ],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_original/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_original/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_original",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/k4t20_original"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "kalman_4d",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "kalman_4d-tentative10",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative10/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative10/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative10",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative10"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "kalman_4d-tentative15",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative15/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative15/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative15",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative15"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "kalman_4d-tentative5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/kalman_4d-tentative5"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/gt/motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "appearance",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/appearance/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/appearance/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/appearance",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/appearance"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "baseline",
+      "aliases": [
+        "kalman_normal",
+        "original",
+        "test_association_original"
+      ],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/baseline/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/baseline/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/baseline",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/baseline"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp02_tentative_5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp02_tentative_5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp02_tentative_5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp02_tentative_5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp02_tentative_5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp03_max_age_15",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp03_max_age_15/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp03_max_age_15/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp03_max_age_15",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp03_max_age_15"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp04_max-age15_tentative5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp04_max-age15_tentative5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp04_max-age15_tentative5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp04_max-age15_tentative5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/exp04_max-age15_tentative5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "fused",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "fused_color",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_color/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_color/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_color",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_color"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "fused_contrast",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_contrast/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_contrast/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_contrast",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_contrast"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "fused_patch",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_patch/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_patch/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_patch",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_patch"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "fused_w025",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_w025/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_w025/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_w025",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/fused_w025"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t10_motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t10_motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t10_motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t10_motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t10_motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_appearance",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_appearance/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_appearance/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_appearance",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_appearance"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_fused",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_fused_color",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_color/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_color/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_color",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_color"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_fused_contrast",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_contrast/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_contrast/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_contrast",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_contrast"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_fused_patch",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_patch/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_patch/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_patch",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_patch"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_fused_w025",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_w025/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_w025/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_w025",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_fused_w025"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_original",
+      "aliases": [
+        "kalman4d_tentative20"
+      ],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_original/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_original/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_original",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/k4t20_original"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative10",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative10/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative10/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative10",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative10"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative15",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative15/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative15/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative15",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative15"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative5/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative5/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/kalman_4d-tentative5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "motion",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/experiments/results_v2/yolo/motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "appearance",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/appearance/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/appearance"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "baseline",
+      "aliases": [
+        "kalman_normal",
+        "original",
+        "test_association_original"
+      ],
+      "kind": "legacy",
+      "files": {
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/baseline/6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_normal/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/baseline",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_normal",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/test_association_original (identical to /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_normal/1DAC_tracks.csv)"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp02_tentative_5",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp02_tentative_5/1DAC_tentative5_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp02_tentative_5/6C42_tentative5_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp02_tentative_5",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp02_tentative_5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp03_max_age_15",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp03_max_age_15/6C42_age15_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp03_max_age_15"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "exp04_max-age15_tentative5",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp04_max-age15_tentative5/1DAC_age15_tentative5_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp04_max-age15_tentative5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t10_motion",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/k4t10_motion/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/k4t10_motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_motion",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/k4t20_motion/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/k4t20_motion"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "k4t20_original",
+      "aliases": [
+        "kalman4d_tentative20"
+      ],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman4d_tentative20/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman4d_tentative20"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative10",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative10/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative10"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative15",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative15/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative15"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "kalman_4d-tentative5",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative5/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/kalman_4d-tentative5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "motion",
+      "aliases": [],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/motion/1DAC_tracks.csv",
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/motion/6C42_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/motion",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/motion"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "baseline",
+      "aliases": [
+        "kalman_normal",
+        "original",
+        "test_association_original"
+      ],
+      "kind": "legacy",
+      "files": {
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/test_original_GT1/1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/test_original_GT1"
+      ]
+    },
+    {
+      "input": "cloud",
+      "experiment": "cloud_reference",
+      "aliases": [],
+      "kind": "corners",
+      "files": {
+        "20250920_063942_6C42": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data/20250920_063942_6C42_cloud_reference_tracks.csv",
+        "20251012_164031_1DAC": "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data/20251012_164031_1DAC_cloud_reference_tracks.csv"
+      },
+      "sources": [
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data",
+        "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data"
+      ]
+    }
+  ],
+  "skipped": [
+    "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/baseline/1DAC_tracks.csv: empty (header only), treated as a failed run, not scored",
+    "no *_tracks.csv in /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/cloud_reference, skipped",
+    "/Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp03_max_age_15/1DAC_age15_tracks.csv: empty (header only), treated as a failed run, not scored"
+  ],
+  "default_variant": "matched_final",
+  "primary_similarity": {
+    "measure": "dotd",
+    "s_scheme": "per_track"
+  }
+}

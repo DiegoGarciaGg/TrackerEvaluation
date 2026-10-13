@@ -1,0 +1,8 @@
+WARNING /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/baseline/1DAC_tracks.csv: empty (header only), treated as a failed run, not scored
+WARNING no *_tracks.csv in /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/cloud_reference, skipped
+WARNING /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results/exp03_max_age_15/1DAC_age15_tracks.csv: empty (header only), treated as a failed run, not scored
+INFO 2 videos with GT, 63 runs
+INFO evaluating 244 trackers on 2 videos
+INFO evaluating 10 trackers on 1 videos
+INFO evaluating 1 trackers on 1 videos
+INFO wrote /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/.claude/worktrees/repo-identification-dea283/evaluation/new/results/20261009T131941Z (2 videos, 63 runs, 3 skipped)

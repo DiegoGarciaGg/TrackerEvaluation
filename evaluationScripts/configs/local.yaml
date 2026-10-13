@@ -1,0 +1,33 @@
+# Machine-specific paths (git-ignored). See default.yaml for what each entry means.
+paths:
+  videos_dir: /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data
+  gt_dir: /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/data/spoor
+  gt_suffix: _reference_tracks_corrected.csv
+  results:
+    - {path: experiments/results_v2, layout: v2, inputs: [gt, yolo]}
+    - path: /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/experiments/results
+      layout: legacy
+      input: yolo
+      folders:
+        test_original_GT1: {input: gt, experiment: baseline}
+  aliases: experiments/results_v2/aliases.yaml
+  external:
+    - {name: cloud, dir: /Users/valentinabenedossi/Desktop/Spoor/bird-tracking/spoor_tracker/tracker-kit/data, suffix: _cloud_reference_tracks.csv}
+  cache_dir: evaluation/new/cache
+
+similarity:
+  measures: [dotd, iou]
+  primary: dotd
+  dotd:
+    s_schemes: [per_track, fixed, per_box]
+    primary_s_scheme: per_track
+    s_fixed: 9.0
+    s_min: 4.0
+
+variants:
+  default: matched_final
+  derived: [matched_online, matched_final, matched_final_all, predicted, frozen]
+
+trackeval:
+  use_parallel: false
+  num_cores: 4
