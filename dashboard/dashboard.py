@@ -191,11 +191,12 @@ with st.expander("Metric breakdown: detection versus association (HOTA = sqrt(De
 
 # --- 3. complete tracks at a glance, then videos
 st.header("What the results look like")
-runs = {tracker_label(r.tracker): r for r in defaults.itertuples()}
+# plain strings, not pandas scalars: {display name: (tracker folder, run folder)}
+runs: dict[str, tuple[str, str]] = {tracker_label(str(t)): (str(t), str(r)) for t, r in zip(defaults["tracker"], defaults["run"])}
 st.subheader("Complete tracks on the last frame")
 st.markdown('<div class="caption">Each run drawn as trajectories in the track\'s colour with its id at the end; ground truth in green. '
             "A colour change along one path is an identity switch, a coloured line on nothing is a false track, a green line without company is a missed bird.</div>", unsafe_allow_html=True)
-images = [(name, RUNS / clip / r.tracker / r.run / "tracks.png") for name, r in runs.items()]
+images = [(name, RUNS / clip / tracker / run / "tracks.png") for name, (tracker, run) in runs.items()]
 images = [(name, path) for name, path in images if path.exists()]
 if images:
     for start in range(0, len(images), 3):
@@ -211,7 +212,7 @@ st.markdown('<div class="caption">Tracker boxes and trails in the track\'s colou
 v1, v2 = st.columns(2)
 with v1:
     one = st.selectbox("One tracker", list(runs), key="one")
-    video = RUNS / clip / runs[one].tracker / runs[one].run / "tracked.mp4"
+    video = RUNS / clip / runs[one][0] / runs[one][1] / "tracked.mp4"
     if video.exists():
         st.video(str(video))
     else:
@@ -219,11 +220,11 @@ with v1:
 with v2:
     left = st.selectbox("Side by side: left", list(runs), key="left")
     right = st.selectbox("Side by side: right", list(runs), index=min(1, len(runs) - 1), key="right")
-    a, b = runs[left], runs[right]
-    composite = VIDEOS / clip / f"{a.tracker}_{a.run}__vs__{b.tracker}_{b.run}.mp4"
+    (a_tracker, a_run), (b_tracker, b_run) = runs[left], runs[right]
+    composite = VIDEOS / clip / f"{a_tracker}_{a_run}__vs__{b_tracker}_{b_run}.mp4"
     if composite.exists():
         st.video(str(composite))
-    elif (a.tracker, a.run) == (b.tracker, b.run):
+    elif (a_tracker, a_run) == (b_tracker, b_run):
         st.info("Pick two different trackers.")
     elif not CLIPS[clip]["video"].exists():
         st.info("The clip itself is not available here, so this pair cannot be rendered.")
@@ -231,7 +232,7 @@ with v2:
         from experiments.render_video import render
 
         with st.spinner("Rendering..."):
-            render(CLIPS[clip]["video"], [RUNS / clip / a.tracker / a.run / "tracks.csv", RUNS / clip / b.tracker / b.run / "tracks.csv"],
+            render(CLIPS[clip]["video"], [RUNS / clip / a_tracker / a_run / "tracks.csv", RUNS / clip / b_tracker / b_run / "tracks.csv"],
                    [left, right], composite, CLIPS[clip]["gt_tracks"], 0.5)
         st.rerun()
 
