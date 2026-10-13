@@ -44,8 +44,6 @@ LOWER_IS_BETTER = {"IDSW", "Frag", "diag_id_changes"}
 INTEGER = {"IDSW", "Frag", "n_pred_ids", "n_gt_ids", "diag_id_changes"}
 TRACKER_NAMES = {"simplesort": "SimpleSORT (Spoor)", "sort": "SORT", "bytetrack": "ByteTrack", "ocsort": "OC-SORT", "botsort": "BoT-SORT", "cbiou": "C-BIoU"}
 SOURCE_NAMES = {"yolo": "Detector output", "gt": "Ground-truth boxes as detections"}
-VARIANT_NAMES = {"matched_final": "matched rows (default)", "matched_online": "matched rows, confirmed only", "predicted": "all rows, coasting included",
-                 "frozen": "all rows, coasting frozen", "matched_final_all": "matched rows, unconfirmed too"}
 SIMILARITY_NAMES = {("dotd", "per_track"): "DotD, scale = bird size (primary)", ("dotd", "fixed"): "DotD, scale = 9 px", ("dotd", "per_box"): "DotD, scale = box size", ("iou", "none"): "IoU"}
 CLIP_BY_VIDEO = {clip["video_id"]: name for name, clip in CLIPS.items()}
 
@@ -154,17 +152,13 @@ st.title("Tracker comparison")
 c1, c2, c3 = st.columns([2, 2, 3])
 clip = c1.selectbox("Video", [c for c in CLIPS if c in set(df["clip"])], format_func=lambda c: CLIPS[c]["title"])
 sources = [s for s in ("yolo", "gt") if ((df["clip"] == clip) & (df["input"] == s)).any()]
-source = c2.selectbox("Detections given to the trackers", sources, format_func=lambda s: SOURCE_NAMES[s],
-                      help="Every tracker receives exactly the same boxes. Ground-truth boxes remove detector errors and show association quality alone. "
-                           "A clip without detector output offers only the ground-truth option.")
+source = c2.selectbox("Detections given to the trackers", sources, format_func=lambda s: SOURCE_NAMES[s])
 with c3.expander("Evaluation settings"):
-    variants = [v for v in VARIANT_NAMES if v in set(df["variant"])]
-    variant = st.selectbox("Rows scored (variant)", variants, format_func=lambda v: VARIANT_NAMES[v],
-                           help="SimpleSORT also writes coasting rows (the last matched box repeated); the default scores matched rows only.")
+    variant = "matched_final"  # only rows with a detection are scored, for every tracker
     sims = [s for s in SIMILARITY_NAMES if s in set(zip(df["similarity"], df["s_scheme"]))]
     similarity = st.selectbox("Box matching (similarity)", sims, format_func=lambda s: SIMILARITY_NAMES[s],
                               help="DotD = exp(-distance between centers / scale). IoU is harsh on nine-pixel birds.")
-    st.markdown(f'<div class="caption">Metrics by TrackEval through the team evaluator (evaluationScripts/birdeval): every frame scored, no ignore regions. '
+    st.markdown(f'<div class="caption">Only rows with a detection are scored (birdeval variant matched_final). Every frame counts, no ignore regions. '
                 f'This clip: {CLIPS[clip]["note"]}.</div>', unsafe_allow_html=True)
 
 shown = df[(df["clip"] == clip) & (df["variant"] == variant) & (df["similarity"] == similarity[0]) & (df["s_scheme"] == similarity[1])]
@@ -179,9 +173,6 @@ st.markdown(f'<div class="caption">{CLIPS[clip]["title"]} · {SOURCE_NAMES[sourc
             "Higher is better except IDSW, Frag and id changes; MOTP here is the mean similarity of matched pairs (1 = centers coincide).</div>", unsafe_allow_html=True)
 chart_table = defaults.assign(Tracker=defaults["tracker"].map(tracker_label))
 st.markdown(metrics_table_html(chart_table), unsafe_allow_html=True)
-st.markdown('<div class="caption">Right of the line: DetA = detection accuracy (DetRe recall, DetPr precision); AssRe low = a bird split over several ids, AssPr low = an id jumping between birds; '
-            "ids = track ids the tracker produced, birds = labelled birds, ids / birds = 1 is ideal; id changes = the evaluator's own count of a track jumping to another bird "
-            "(catches swaps between almost overlapping birds that IDSW misses). The full CSV has 40 more columns.</div>", unsafe_allow_html=True)
 
 # --- 2. charts
 st.header("How they compare")

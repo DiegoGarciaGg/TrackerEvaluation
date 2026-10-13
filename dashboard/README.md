@@ -34,8 +34,9 @@ appears as soon as it has an evaluated `real_default` or `gt_default` run.
 4. **SimpleSORT parameter and robustness studies** (collapsed): the E5 heatmap and the E4 curves.
 
 Controls: video, detections given to the trackers (detector output or ground-truth boxes,
-never mixed in one table), and under "Evaluation settings" the variant (which rows are scored)
-and the similarity (DotD with the bird's size as scale, DotD with 9 px, or IoU).
+never mixed in one table), and under "Evaluation settings" the similarity (DotD with the bird's
+size as scale, DotD with 9 px, or IoU). Only rows with a detection are scored (birdeval's
+`matched_final` variant) for every tracker.
 
 ## Deploying it (Streamlit Community Cloud)
 
