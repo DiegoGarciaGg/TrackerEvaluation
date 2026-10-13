@@ -12,6 +12,7 @@ def test_every_registered_clip_has_its_files(kit_root, bench_root, repo_root):
     assert {"flock", "turbine", "semrev"} <= set(clips)
     for clip in clips.values():
         assert clip["video"].exists() and clip["gt_tracks"].exists() and clip["gt_detections"].exists(), clip["name"]
+        assert clip["note"]
         for key in ("detections", "cloud"):
             assert clip[key] is None or clip[key].exists(), (clip["name"], key)
     assert clip_of_video_id("20251012_164031_1DAC", repo_root)["name"] == "flock"

@@ -1,44 +1,34 @@
 # benchmark/evaluation/
 
-Reads finished tracker CSVs plus a reference and reports. Never runs the tracker, never opens a
-video. Dependencies: numpy, scipy, TrackEval (pinned commit `12c8791b303e0a0b50f753af204249e622d0281a`,
-installed with `.venv/bin/python -m pip install "git+https://github.com/JonathonLuiten/TrackEval@12c8791b303e0a0b50f753af204249e622d0281a"`).
+The scoring side. The metrics themselves are computed by the team's evaluator in
+`../../evaluationScripts/` (birdeval: TrackEval HOTA, Identity and CLEAR with DotD and IoU
+similarity, several row variants, counts and diagnostics; `evaluationScripts/METRICS.md`
+explains every column). This folder only holds the glue:
 
-Built to be portable to the repo's `edge/evaluation`: `contracts.py` keeps the names and
-meaning of `spoorpredictioneval.contracts` (`Detection`, `TrackUpdate`, `Track`, `Provenance`,
-`RunResult`); fields this kit adds are marked `# added` and have defaults.
-
-| module | role |
+| file | role |
 |---|---|
-| `contracts.py` | the vocabulary: observation, track update, track, provenance, run |
-| `provenance.py` | mandatory `extra` keys: predictor, claim, dataset, video_id, inputs with sha256, notes |
-| `hashing.py` | sha256 of files, of the `tracker/` source tree, of JSON payloads |
-| `store.py` | JSONL store with content-addressed ids and `"<dataset>|<video_id>|<dimension>"` references |
-| `adapters/` | `reference_tracks.py` (ground truth and cloud export), `detections_csv.py`, `tracker_csv.py` (6 or 10 columns, any tracker), `motchallenge.py` (exporter for validation) |
-| `views.py` | per-frame views (`observations` = matched rows, `updates` = all rows), ignore regions, frame restriction |
-| `similarity.py` | `s = max(0, 1 - d/T)`, `T = match_px / (1 - threshold)` (8 px -> T = 16 at threshold 0.5); IoU for validation |
-| `trackeval_bridge.py` | feeds views to TrackEval's HOTA, CLEAR and Identity classes directly; numpy alias shim for `np.float` / `np.int` |
-| `diagnostics.py` | identity-switch list, ids per object, orphan ids, gaps and durations (Hungarian with CLEAR's tie-break, so switches explain CLEAR's IDSW) |
-| `evaluate.py` | one candidate against one reference: metrics table, sensitivity, both views, with/without region, diagnostics; markdown and JSON rendering |
-| `clips.py` | loads `benchmark/clips.json`, the clip registry (paths relative to the repo root, labelled frame range, ignore region) |
-| `cli.py` | report one run from explicit paths |
-| `batch_report.py` | evaluate every `outputs/runs/<clip>/<tracker>/<run>`, write `outputs/reports/SUMMARY.md` and `summary_rows.json` (tracker, library, detection source per run) |
-| `quick_metrics.py` | standalone script: HOTA/MOTA/IDF1 straight from CSVs, no store or report |
+| `run_birdeval.py` | exports every `outputs/runs/<clip>/<tracker>/<run>/tracks.csv` into birdeval's labelled layout, writes its config, runs it, and leaves `outputs/reports/birdeval/metrics_per_video.csv` (every metric per run, variant, similarity and video), `metrics_pooled.csv`, `run_info.json` and `runs_index.csv` (which run folder, tracker and parameters each row belongs to) |
+| `clips.py` | loads `benchmark/clips.json`, the clip registry (paths relative to the repo root, notes) |
+| `hashing.py` | sha256 of files, of a source tree and of JSON payloads, used by the run manifests |
 
-Coasting convention (from the repo's finished surface): a matched row is an observation and a
-track update with confidence 1.0; a coasting row is only a track update with confidence 0.0 and
-its `missed_frame_count`. The 6-column baseline cannot tell them apart, so its adapter marks
-`coasting_known = False` and the matched-rows-only view is refused for it.
+How our runs map to birdeval's vocabulary (done by `run_birdeval.py`):
 
-Claims: a report names what a comparison asserts from the reference's provenance: `accuracy`
-(ground truth), `parity` (cloud export), `regression` (a frozen tracker run).
+- `input`: `yolo` for detector output, `gt` for ground-truth boxes as detections.
+- `experiment`: `<tracker>__<configuration>`, e.g. `simplesort__default`, `cbiou__default`,
+  `simplesort__maxage15_tent3`, `simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed1`.
+- rows: our matched rows become `row_type = matched`; SimpleSORT's coasting rows (the last
+  matched box repeated) become `row_type = predicted`, so birdeval's `predicted` and `frozen`
+  variants coincide for us. Our runner never writes pre-confirmation rows, so `matched_final`
+  (the default variant) equals `matched_online`. Every track in our CSVs is confirmed.
+- the cloud exports in `tracker_kit/data` are the external reference (`input = cloud`).
 
 ```
-.venv/bin/python benchmark/evaluation/cli.py --tracks benchmark/outputs/runs/flock/simplesort/real_default/tracks.csv \
-  --reference benchmark/ground_truth/20251012_164031_1DAC_reference_tracks_corrected.csv --reference-kind gt \
-  --video-id 20251012_164031_1DAC --out benchmark/outputs/reports/my_report
-.venv/bin/python benchmark/evaluation/batch_report.py --jobs 4
-.venv/bin/python benchmark/evaluation/quick_metrics.py --gt benchmark/ground_truth/..._reference_tracks_corrected.csv \
-  --tracks tracker_kit/results/flock/baseline_tracks.csv --px 8
-.venv/bin/python -m pytest -q
+.venv/bin/python benchmark/evaluation/run_birdeval.py                 # all runs, about 15 minutes
+.venv/bin/python benchmark/evaluation/run_birdeval.py --only-defaults  # the default runs only, 2 minutes
+.venv/bin/python evaluationScripts/scripts/show_metrics.py benchmark/outputs/reports/birdeval/metrics_per_video.csv
 ```
+
+Scoring rules inherited from the team evaluator: every frame of every clip is scored, with no
+ignore regions and no labelled frame range (the flock's burnt-in timestamp detections and the
+turbine's unlabelled frames count as false positives); boxes are matched by DotD
+`exp(-d / s)` with `s` the bird's size (primary), a fixed 9 px scale, or IoU.

@@ -12,8 +12,8 @@ from experiments.run_experiment import run_experiment
 def test_degraded_gt_is_deterministic_and_keeps_the_schema(kit_root, bench_root, repo_root, tmp_path):
     gt = bench_root / "ground_truth/20250920_063942_6C42_detections_corrected.csv"
     a = write_degraded_gt(gt, tmp_path / "a.csv", drop_rate=0.2, center_noise_px=2.0, false_positives_per_frame=0.3, seed=7, frame_count=671)
-    b = write_degraded_gt(gt, tmp_path / "b.csv", drop_rate=0.2, center_noise_px=2.0, false_positives_per_frame=0.3, seed=7, frame_count=671)
-    c = write_degraded_gt(gt, tmp_path / "c.csv", drop_rate=0.2, center_noise_px=2.0, false_positives_per_frame=0.3, seed=8, frame_count=671)
+    write_degraded_gt(gt, tmp_path / "b.csv", drop_rate=0.2, center_noise_px=2.0, false_positives_per_frame=0.3, seed=7, frame_count=671)
+    write_degraded_gt(gt, tmp_path / "c.csv", drop_rate=0.2, center_noise_px=2.0, false_positives_per_frame=0.3, seed=8, frame_count=671)
     assert sha256_file(tmp_path / "a.csv") == sha256_file(tmp_path / "b.csv")
     assert sha256_file(tmp_path / "a.csv") != sha256_file(tmp_path / "c.csv")
     assert a["effects"]["dropped"] + a["effects"]["kept"] == 241

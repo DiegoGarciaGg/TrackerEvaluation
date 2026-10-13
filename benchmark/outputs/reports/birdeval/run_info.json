@@ -1,0 +1,1239 @@
+{
+  "timestamp_utc": "2026-10-13T08:41:52.636682+00:00",
+  "command": [
+    "benchmark/evaluation/run_birdeval.py"
+  ],
+  "git_commit": "cbab4dd347d1fbb72a2fab407522cbb2391556f4",
+  "git_dirty_files": [
+    "agents/skills/computer-vision-pipeline/.claude-plugin/plugin.json",
+    ".agents/skills/computer-vision-pipeline/SKILL.md",
+    ".agents/skills/computer-vision-pipeline/references/tracking-algorithms.md",
+    ".agents/skills/computer-vision-pipeline/references/video-processing.md",
+    ".agents/skills/computer-vision-pipeline/references/yolo-guide.md",
+    ".agents/skills/computer-vision-pipeline/scripts/model_trainer.py",
+    ".agents/skills/computer-vision-pipeline/scripts/video_analyzer.py",
+    ".agents/skills/frontend-design/LICENSE.txt",
+    ".agents/skills/frontend-design/SKILL.md",
+    ".gitignore",
+    "dashboard/.streamlit/config.toml -> .streamlit/config.toml",
+    "README.md",
+    "benchmark/README.md",
+    "benchmark/evaluation/README.md",
+    "dashboard/README.md",
+    "dashboard/dashboard.py",
+    "skills-lock.json",
+    "benchmark/evaluation/run_birdeval.py",
+    "benchmark/outputs/reports/birdeval/",
+    "benchmark/tests/test_run_birdeval.py",
+    "dashboard/requirements.txt"
+  ],
+  "trackeval_version": "1.0.dev1",
+  "trackeval_source": "https://github.com/JonathonLuiten/TrackEval",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "n_videos": 3,
+  "videos": [
+    "20250920_063942_6C42",
+    "20251012_164031_1DAC",
+    "semrev_collision_20250419_073201_2B6B_176-196"
+  ],
+  "n_runs": 94,
+  "runs": [
+    {
+      "input": "gt",
+      "experiment": "botsort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/botsort__default"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "bytetrack__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/bytetrack__default"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "cbiou__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/cbiou__default"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "ocsort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/ocsort__default"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__default"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise0.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise0.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise1.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.00_noise3.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise0.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise1.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.10_noise3.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise0.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise1.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.20_noise3.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise0.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise1.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.0_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed1",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed1/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed1"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed2"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/simplesort__gtdeg_drop0.30_noise3.0_fp0.5_seed3"
+      ]
+    },
+    {
+      "input": "gt",
+      "experiment": "sort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default/20251012_164031_1DAC_tracks.csv",
+        "semrev_collision_20250419_073201_2B6B_176-196": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default/semrev_collision_20250419_073201_2B6B_176-196_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/gt/sort__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "botsort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/botsort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/botsort__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/botsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/botsort__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "bytetrack__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/bytetrack__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/bytetrack__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/bytetrack__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/bytetrack__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "cbiou__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/cbiou__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/cbiou__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/cbiou__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/cbiou__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "ocsort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/ocsort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/ocsort__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/ocsort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/ocsort__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__default"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage15_tent2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent2/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent2",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent2"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage15_tent3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent3/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent3",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent3"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage15_tent5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent5/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent5/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent5",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage15_tent5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage30_tent2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent2/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent2",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent2"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage30_tent5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent5/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent5/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent5",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage30_tent5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage5_tent2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent2/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent2",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent2"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage5_tent3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent3/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent3",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent3"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage5_tent5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent5/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent5/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent5",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage5_tent5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage60_tent2",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent2/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent2/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent2",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent2"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage60_tent3",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent3/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent3/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent3",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent3"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "simplesort__maxage60_tent5",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent5/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent5/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent5",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/simplesort__maxage60_tent5"
+      ]
+    },
+    {
+      "input": "yolo",
+      "experiment": "sort__default",
+      "aliases": [],
+      "kind": "labelled",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/sort__default/20250920_063942_6C42_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/sort__default/20251012_164031_1DAC_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/sort__default",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2/yolo/sort__default"
+      ]
+    },
+    {
+      "input": "cloud",
+      "experiment": "cloud_reference",
+      "aliases": [],
+      "kind": "corners",
+      "files": {
+        "20250920_063942_6C42": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker_kit/data/20250920_063942_6C42_cloud_reference_tracks.csv",
+        "20251012_164031_1DAC": "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker_kit/data/20251012_164031_1DAC_cloud_reference_tracks.csv"
+      },
+      "sources": [
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker_kit/data",
+        "/Users/diegogarciagonzalez/tracker-kit-Eval/tracker_kit/data"
+      ]
+    }
+  ],
+  "skipped": [],
+  "default_variant": "matched_final",
+  "primary_similarity": {
+    "measure": "dotd",
+    "s_scheme": "per_track"
+  }
+}

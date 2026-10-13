@@ -1,0 +1,36 @@
+paths:
+  videos_dir: /Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/videos
+  gt_dir: /Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/ground_truth
+  gt_suffix: _reference_tracks_corrected.csv
+  results:
+  - path: /Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/runs_v2
+    layout: v2
+    inputs:
+    - gt
+    - yolo
+  aliases: null
+  external:
+  - name: cloud
+    dir: /Users/diegogarciagonzalez/tracker-kit-Eval/tracker_kit/data
+    suffix: _cloud_reference_tracks.csv
+  cache_dir: /Users/diegogarciagonzalez/tracker-kit-Eval/benchmark/outputs/birdeval/cache
+similarity:
+  measures:
+  - dotd
+  - iou
+  primary: dotd
+  dotd:
+    s_schemes:
+    - per_track
+    - fixed
+    primary_s_scheme: per_track
+    s_fixed: 9.0
+    s_min: 4.0
+variants:
+  default: matched_final
+  derived:
+  - matched_final
+  - predicted
+trackeval:
+  use_parallel: false
+  num_cores: 1

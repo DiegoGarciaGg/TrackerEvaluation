@@ -21,7 +21,7 @@ The only place that runs trackers. Spoor's `tracker_kit/tracker/` and `run_track
 - `render_all.py`: `tracks.png` and `tracked.mp4` next to every default run of every clip in `clips.json`.
 - `specs/`: the JSON lists of runs used so far (E3, E4, E5, the Roboflow trackers, the semrev clip).
 
-Output layout: `benchmark/outputs/runs/<clip>/<tracker>/<run>/` with `tracks.csv`, its manifest, and later `tracks.png` and `tracked.mp4`.
+Output layout: `benchmark/outputs/runs/<clip>/<tracker>/<run>/` with `tracks.csv`, its manifest, and later `tracks.png` and `tracked.mp4`. Scoring: `benchmark/evaluation/run_birdeval.py`.
 
 A flock run takes 5 to 11 minutes on this machine; the turbine clip takes seconds.
 

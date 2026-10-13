@@ -20,29 +20,29 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-import paths  # noqa: E402,F401
+import paths  # noqa: E402,F401  (puts benchmark/ and tracker_kit/ on sys.path)
 
 from experiments.render_video import GT_COLOR, load_tracks, track_color  # noqa: E402
 
 
 def track_polylines(rows_by_frame: dict) -> dict:
     """Ordered center points per track id: ``{id: [(frame, cx, cy), ...]}``."""
-    paths: dict = {}
+    tracks: dict = {}
     for frame in sorted(rows_by_frame):
         for track_id, x, y, w, h, _matched in rows_by_frame[frame]:
-            paths.setdefault(track_id, []).append((frame, x + w / 2, y + h / 2))
-    return paths
+            tracks.setdefault(track_id, []).append((frame, x + w / 2, y + h / 2))
+    return tracks
 
 
 def gt_polylines(gt_path: Path) -> dict:
     import csv
 
-    paths: dict = {}
+    tracks: dict = {}
     with gt_path.open(newline="") as handle:
         for row in csv.DictReader(handle):
             x1, y1, x2, y2 = (float(row[k]) for k in ("x1", "y1", "x2", "y2"))
-            paths.setdefault(row["obj_id"], []).append((int(float(row["frame_number"])), (x1 + x2) / 2, (y1 + y2) / 2))
-    return {k: sorted(v) for k, v in paths.items()}
+            tracks.setdefault(row["obj_id"], []).append((int(float(row["frame_number"])), (x1 + x2) / 2, (y1 + y2) / 2))
+    return {k: sorted(v) for k, v in tracks.items()}
 
 
 def render_image(video: Path, tracks_path: Path, out: Path, gt_path: Path | None, frame: str | int = "last", scale: float = 0.5, label: str = "") -> dict:
@@ -61,21 +61,21 @@ def render_image(video: Path, tracks_path: Path, out: Path, gt_path: Path | None
         for points in gt_polylines(gt_path).values():
             pts = np.array([[x, y] for _, x, y in points], dtype=np.int32)
             cv2.polylines(image, [pts], False, GT_COLOR, 3)
-    paths = track_polylines(load_tracks(tracks_path))
-    for track_id, points in paths.items():
+    tracks = track_polylines(load_tracks(tracks_path))
+    for track_id, points in tracks.items():
         pts = np.array([[x, y] for _, x, y in points], dtype=np.int32)
         color = track_color(track_id)
         cv2.polylines(image, [pts], False, color, 4)
         cv2.circle(image, tuple(pts[-1]), 8, color, -1)
         cv2.putText(image, str(track_id), (int(pts[-1][0]) + 10, int(pts[-1][1]) - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, color, 3)
-    title = f"{label or tracks_path.parent.name}: {len(paths)} track ids" + (f", ground truth in green" if gt_path else "")
+    title = f"{label or tracks_path.parent.name}: {len(tracks)} track ids" + (", ground truth in green" if gt_path else "")
     # below the burnt-in timestamp some clips carry in the top-left corner
     cv2.putText(image, title, (16, 150), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (255, 255, 255), 6)
     cv2.putText(image, title, (16, 150), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (20, 20, 20), 2)
     small = cv2.resize(image, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
     out.parent.mkdir(parents=True, exist_ok=True)
     cv2.imwrite(str(out), small)
-    return {"out": str(out), "frame": index, "track_ids": len(paths)}
+    return {"out": str(out), "frame": index, "track_ids": len(tracks)}
 
 
 def main() -> None:

@@ -1,0 +1,6 @@
+{
+  "extraPaths": ["benchmark", "tracker_kit", "evaluationScripts"],
+  "venvPath": ".",
+  "venv": ".venv",
+  "exclude": [".venv", "**/__pycache__", "benchmark/outputs"]
+}

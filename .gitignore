@@ -12,11 +12,15 @@ __pycache__/
 *.mkv
 tracker_kit/out/
 
-# evaluation outputs that are regenerated from outputs/runs with evaluation/batch_report.py
-benchmark/outputs/reports/runs/
-benchmark/outputs/store/
+# regenerable evaluation outputs (side-by-side videos; birdeval working copies below)
 benchmark/outputs/videos/
 # degraded detection CSVs are deterministic from ground_truth/ + manifest (seed, params); keep the manifests
 benchmark/outputs/detections/**/*.csv
-# keep: benchmark/outputs/runs/ (tracker outputs + manifests, hours of compute), benchmark/outputs/reports/SUMMARY.md,
+# keep: benchmark/outputs/runs/ (tracker outputs + manifests, hours of compute), benchmark/outputs/reports/birdeval/ (the metrics),
 # benchmark/outputs/docs/, benchmark/ground_truth/
+
+# tooling artefacts
+.agents/
+skills-lock.json
+# birdeval working copies (exported runs, video links, metadata cache); the metrics CSVs in outputs/reports/birdeval are kept
+benchmark/outputs/birdeval/

@@ -1,39 +1,6 @@
-"""Tracker evaluation: contracts, adapters, store, metrics and diagnostics.
+"""Scoring side of the benchmark.
 
-Reads finished CSV outputs plus a reference and reports. Never runs the tracker, never opens a
-video. Depends on the standard library, numpy and scipy only (TrackEval for the MOT metrics).
-Designed to be portable to the repo's ``edge/evaluation`` built on ``spoorpredictioneval``:
-the contracts keep that library's names and meaning.
+The metrics come from the team's evaluator in ``evaluationScripts/`` (birdeval);
+``run_birdeval.py`` is the bridge that feeds it our runs. ``clips.py`` is the clip registry and
+``hashing.py`` the content hashes the run manifests use.
 """
-
-from evaluation.contracts import (
-    Box,
-    Detection,
-    FrameDetections,
-    Provenance,
-    RunResult,
-    StageStat,
-    StageTiming,
-    Track,
-    TrackUpdate,
-    box_center,
-    reconstruct_tracks,
-)
-from evaluation.store import JsonlResultStore, ResultStore, content_run_id
-
-__all__ = [
-    "Box",
-    "Detection",
-    "FrameDetections",
-    "Provenance",
-    "RunResult",
-    "StageStat",
-    "StageTiming",
-    "Track",
-    "TrackUpdate",
-    "box_center",
-    "reconstruct_tracks",
-    "JsonlResultStore",
-    "ResultStore",
-    "content_run_id",
-]
